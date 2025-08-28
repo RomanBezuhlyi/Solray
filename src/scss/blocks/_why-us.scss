@@ -1,1 +1,42 @@
 @use '../abstracts' as *;
+
+.why-us {
+	padding: 120px 0;
+	&__title {
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		row-gap: 55px;
+	}
+
+	&__item {
+		position: relative;
+		@include flex(column, flex-start, center);
+		img {
+			margin-bottom: 22px;
+		}
+		p {
+			padding: 0 25px;
+			@include text-style(17px, 600, 23px, center);
+		}
+	}
+
+	&__item::before {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 50px;
+		background: #e7e7e7;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+	}
+
+	&__item:nth-child(5)::before,
+	&__item:nth-child(9)::before {
+		content: none;
+	}
+}

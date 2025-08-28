@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.category {
+	padding: 120px 0;
+	background: #1a1c1e;
+	background-image: url('./img/category.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__title {
+		color: $bg;
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		row-gap: 50px;
+	}
+
+	&__item {
+	}
+
+	&__item-link {
+		img {
+			width: 204px;
+			height: 204px;
+			object-fit: cover;
+			margin-bottom: 24px;
+		}
+		p {
+			max-width: 204px;
+			color: $bg;
+			@include text-style(17px, 600, 23px, center);
+		}
+	}
+
+	&__btn {
+		margin: auto;
+		margin-top: 50px;
+		@include center;
+		@include box(285px, 70px, 48px);
+		border: 2px solid $bg;
+		color: $bg;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: $bg;
+			color: $text;
+		}
+	}
+}
