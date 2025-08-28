@@ -1,0 +1,231 @@
+@use '../abstracts' as *;
+
+.header {
+	&__top-wrap {
+		padding: 12px 0;
+		border-bottom: 1px solid $grey;
+	}
+
+	&__top {
+		@include flex(row, space-between, center);
+	}
+
+	&__top-left {
+		@include flex(row, flex-start, center);
+	}
+
+	&__top-lang {
+		position: relative;
+		padding-right: 16px;
+
+		&__button {
+			@include center;
+			gap: 4px;
+			cursor: pointer;
+		}
+
+		&__current {
+			@include text-style(14px, 600, normal, right);
+		}
+
+		&__arrow {
+			@include transition;
+		}
+
+		&__list {
+			position: absolute;
+			top: 120%;
+			left: 0;
+			background-color: $bg;
+			border-radius: 4px;
+			border: 1px solid $grey;
+			@include transition;
+			z-index: 10;
+			opacity: 0;
+			pointer-events: none;
+
+			&.header__top-lang__list--open {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+
+		&__item {
+			padding: 5px 10px;
+			cursor: pointer;
+			@include transition;
+			&:hover {
+				background: $grey;
+			}
+		}
+	}
+
+	&__top-nav {
+		@include flex(row, center, center, 18px);
+		padding: 0 16px;
+		border-left: 1px solid $grey;
+		border-right: 1px solid $grey;
+	}
+
+	&__top-nav--item {
+		@include center;
+	}
+
+	&__top-city {
+		padding-left: 16px;
+		@include flex(row, flex-start, center);
+	}
+
+	&__top-city--label {
+		margin-right: 8px;
+	}
+
+	&__top-city--value {
+		color: $accent;
+		@include text-style(14px, 600, normal);
+	}
+
+	&__top-right {
+		@include flex(row, flex-end, center);
+	}
+
+	&__top-auth {
+		@include flex(row, flex-start, center, 16px);
+		padding-right: 16px;
+	}
+
+	&__top-auth--login {
+		@include text-style(14px, 600, normal);
+	}
+
+	&__top-auth--reg {
+		color: $accent;
+		@include text-style(14px, 600, normal);
+	}
+
+	&__top-notification {
+		@include flex(row, flex-start, center, 16px);
+		padding: 0 16px;
+		border-left: 1px solid $grey;
+		border-right: 1px solid $grey;
+	}
+
+	&__top-notification--item {
+		position: relative;
+		span {
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include center;
+			@include box(13px, 13px, 24px);
+			background: $accent;
+			color: $bg;
+			@include text-style(10px, 500, 10px, center);
+		}
+	}
+
+	&__top-social {
+		@include flex(row, flex-start, center, 24px);
+		padding-left: 16px;
+	}
+
+	&__top-social--item {
+		@include transition;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__middle-wrap {
+		padding: 12px 0;
+	}
+
+	&__middle {
+		@include flex(row, space-between, center);
+	}
+
+	&__middle-logo {
+		width: 118px;
+		height: 96px;
+		object-fit: cover;
+	}
+
+	&__middle-search {
+		position: relative;
+		width: 292px;
+		height: 48px;
+		input {
+			width: 100%;
+			height: 100%;
+			padding: 0 20px;
+			border-radius: 48px;
+			border: 1px solid rgba(125, 125, 125, 0.5);
+		}
+		input::placeholder {
+			color: #7d7d7d;
+			@include text-style(16px, 400, normal);
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__middle-number {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__middle-number--top {
+		@include flex(row, flex-start, center);
+		p {
+			@include text-style(14px, 400, normal);
+			margin-right: 8px;
+		}
+		ul {
+			@include flex(row, center, center, 5px);
+		}
+	}
+
+	&__middle-number--middle {
+		@include text-style(26px, 600, normal);
+	}
+
+	&__middle-number--bottom {
+		@include text-style(16px, 400, normal);
+		height: 20px;
+	}
+
+	&__middle-btn {
+		@include flex(row, center, center, 8px);
+		@include box(250px, 48px, 48px);
+		background: #1a1c1e;
+		color: $bg;
+		@include text-style(16px, 600, normal, center);
+		img {
+			@include transition;
+		}
+		&:hover img {
+			transform: scale(1.2);
+		}
+	}
+
+	&__bottom-wrap {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		position: relative;
+		z-index: 11;
+	}
+
+	&__bottom {
+		@include flex(row, center, center);
+	}
+
+	&__bottom-item {
+		@include center;
+		height: 60px;
+		padding: 0 10px;
+		color: $bg;
+		@include text-style(16px, 400, normal);
+	}
+}

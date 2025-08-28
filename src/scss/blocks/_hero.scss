@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.hero-wrap {
+	position: relative;
+	top: -60px;
+	width: 100%;
+	height: 760px;
+	background-image: url(../../img/hero.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero {
+	padding-top: 204px;
+	max-width: 593px;
+	&__title {
+		color: $bg;
+		@include text-style(65px, 700, 75px);
+		margin-bottom: 40px;
+	}
+
+	&__btn {
+		@include center;
+		width: 285px;
+		height: 70px;
+		border-radius: 48px;
+		border: 2px solid $bg;
+		color: $bg;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: $bg;
+			color: $text;
+		}
+	}
+}

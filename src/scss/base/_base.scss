@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: $font-main;
+	background: $bg;
+	color: $text;
+}
+
+button {
+	cursor: pointer;
+}
