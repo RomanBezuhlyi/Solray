@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.articles {
+	padding: 120px 0;
+	&__title {
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 40px;
+	}
+
+	&__list {
+		margin-bottom: 40px;
+	}
+
+	&__item-img {
+		@include box(100%, 260px, 14px);
+		object-fit: cover;
+		margin-bottom: 20px;
+	}
+
+	&__item-date {
+		color: #535353;
+		@include text-style(14px, 300, normal);
+		margin-bottom: 12px;
+	}
+
+	&__item-title {
+		@include text-style(18px, 600, 26px);
+	}
+
+	&__item-text {
+		@include text-style(16px, 300, 24px);
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom: 12px;
+	}
+
+	&__item-link {
+		@include text-style(14px, 500, normal);
+		border-bottom: 1px solid $text;
+		@include transition;
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+		}
+	}
+
+	&__btn {
+		margin: auto;
+		@include center;
+		@include box(281px, 66px, 48px);
+		background: $text;
+		color: $bg;
+		border: 2px solid $text;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: transparent;
+			color: $text;
+		}
+	}
+}

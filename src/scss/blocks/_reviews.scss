@@ -1,0 +1,75 @@
+@use '../abstracts' as *;
+
+.reviews {
+	background: #fafafa;
+	padding: 120px 0;
+	&__top {
+		@include flex(row, space-between, center);
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		@include text-style(40px, 700, normal);
+	}
+
+	&__nav {
+		@include flex(row, center, center, 20px);
+	}
+	&__nav-prev,
+	&__nav-next {
+		@include center;
+	}
+
+	&__slider {
+		margin-bottom: 50px;
+	}
+
+	&__item-top {
+		@include flex(row, flex-start, center, 8px);
+		margin-bottom: 6px;
+	}
+
+	&__item-avatar {
+		width: 32px;
+		height: 32px;
+		border-radius: 100%;
+		object-fit: cover;
+	}
+
+	&__item-name {
+		@include text-style(17px, 500, normal);
+	}
+
+	&__item-rate {
+		@include flex(row, flex-start, center, 5px);
+		margin-bottom: 8px;
+	}
+
+	&__item-stars {
+		@include flex(row, flex-start, center, 5px);
+	}
+
+	&__item-date {
+		color: #535353;
+		@include text-style(14px, 300, normal);
+	}
+
+	&__item-text {
+		@include text-style(16px, 300, 24px, justify);
+	}
+
+	&__btn {
+		margin: auto;
+		@include center;
+		@include box(281px, 66px, 48px);
+		background: $text;
+		color: $bg;
+		border: 2px solid $text;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: transparent;
+			color: $text;
+		}
+	}
+}
