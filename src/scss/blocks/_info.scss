@@ -1,0 +1,69 @@
+@use '../abstracts' as *;
+
+.info {
+	padding: 60px 0;
+	background: #fafafa;
+
+	&__block {
+		@include flex(row, space-between, center, 32px);
+		margin-bottom: 32px;
+	}
+
+	&__block-img {
+		@include box(598px, 510px);
+		width: 598px;
+		height: 510px;
+		object-fit: cover;
+	}
+
+	&__block-content {
+		position: relative;
+		p {
+			@include text-style(16px, 300, 24px);
+			margin-bottom: 40px;
+		}
+		.overlay {
+			position: absolute;
+			left: 0;
+			bottom: 70px;
+			width: 100%;
+			height: 591px;
+			transform: rotate(90deg);
+			background: linear-gradient(
+				270deg,
+				#fafafa 9.81%,
+				rgba(250, 250, 250, 0) 100%
+			);
+			@include transition;
+		}
+	}
+
+	&__block-content--btn {
+		@include center;
+		@include box(285px, 70px, 58px);
+		border: 2px solid $text;
+		color: $text;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: $text;
+			color: $bg;
+		}
+	}
+
+	&__tags {
+		@include flex(row, flex-start, flex-start, 24px);
+		flex-wrap: wrap;
+		row-gap: 12px;
+	}
+
+	&__tag {
+		@include center;
+		@include box(fit-content, 30px, 4px);
+		padding: 0 16px;
+		border: 1.5px solid #f2f2f2;
+		background: $bg;
+		color: #696969;
+		@include text-style(14px, 400, normal);
+	}
+}

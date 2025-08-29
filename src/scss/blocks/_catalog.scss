@@ -1,0 +1,236 @@
+@use '../abstracts' as *;
+
+.catalog {
+	padding-top: 120px;
+	&__title {
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 50px;
+	}
+
+	&__switcher {
+		@include flex(row, center, center, 24px);
+		margin-bottom: 50px;
+	}
+
+	&__switch {
+		@include center;
+		@include box(fit-content, 50px, 40px);
+		padding: 4px 36px;
+		border: 2px solid $text;
+		@include text-style(16px, 500, normal, center);
+		letter-spacing: 0.8px;
+		@include transition;
+		&:hover {
+			background: $accent;
+			color: $bg;
+			border-color: $accent;
+		}
+		&.active {
+			background: $accent;
+			color: $bg;
+			border-color: $accent;
+		}
+	}
+
+	&__list {
+		gap: 30px;
+		margin-bottom: 50px;
+	}
+
+	&__item {
+		width: 278px;
+		border-radius: 14px;
+		background: $bg;
+		box-shadow: 1px 2px 9px 0 rgba(18, 18, 18, 0.06);
+		overflow: hidden;
+		padding: 0;
+		@include transition;
+		&:hover {
+			box-shadow: 1px 2px 24px 0 rgba(18, 18, 18, 0.24);
+			.catalog__item-overlay {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&__item-top {
+		position: relative;
+		width: 100%;
+		height: 278px;
+		background: #eef0f2;
+	}
+
+	&__item-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(18, 18, 18, 0.7);
+		opacity: 0;
+		pointer-events: none;
+		@include transition;
+	}
+
+	&__item-btn--buy {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include flex(row, center, center, 8px);
+		@include box(181px, 44px, 48px);
+		border: 2px solid $accent;
+		padding: 0 24px;
+		background: $accent;
+		color: $bg;
+		@include text-style(14px, 600, normal, center);
+		@include transition;
+		svg {
+			stroke: $bg;
+			@include transition;
+		}
+		&:hover {
+			background-color: $bg;
+			color: $accent;
+			svg {
+				stroke: $accent;
+			}
+		}
+	}
+
+	&__item-btn--view {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include flex(row, center, center);
+		@include box(181px, 44px, 48px);
+		border: 2px solid $bg;
+		color: $bg;
+		@include text-style(14px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: $bg;
+			color: $text;
+		}
+	}
+
+	&__item-tag {
+		position: absolute;
+		top: 24px;
+		left: 24px;
+		@include center;
+		height: 28px;
+		padding: 0 12px;
+		color: $bg;
+		@include text-style(14px, 600, normal, center);
+		border-radius: 4px;
+		z-index: 10;
+		&.hit {
+			background: $accent;
+		}
+		&.new {
+			background-color: $text;
+		}
+		&.recomm {
+			background-color: #ff8400;
+		}
+	}
+
+	&__item-heart {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		z-index: 10;
+		svg {
+			stroke: $text;
+			fill: none;
+			@include transition;
+		}
+	}
+
+	&__item-heart:hover {
+		svg {
+			stroke: $accent;
+			fill: $accent;
+		}
+	}
+
+	&__item-heart.active {
+		svg {
+			stroke: $accent;
+			fill: $accent;
+		}
+	}
+
+	&__item-img {
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 167px;
+		height: 165px;
+		object-fit: cover;
+	}
+
+	&__item-bottom {
+		padding: 24px;
+	}
+
+	&__item-name {
+		@include text-style(18px, 500, 24px);
+		margin-bottom: 16px;
+	}
+
+	&__item-stock {
+		@include text-style(13px, 400, normal);
+		margin-bottom: 36px;
+		&.in-stock {
+			color: #75cc2f;
+		}
+		&.out-stock {
+			color: #ff0000;
+		}
+	}
+
+	&__item-footer {
+		@include flex(row, space-between, center);
+	}
+
+	&__item-price {
+		@include text-style(30px, 600, 30px);
+		span {
+			@include text-style(18px, 500, 30px);
+		}
+	}
+
+	&__item-rate {
+		@include flex(row, center, center, 6px);
+		@include text-style(14px, 600, 30px, right);
+	}
+
+	&__btn {
+		margin: auto;
+		@include flex(row, center, center, 8px);
+		@include box(281px, 66px, 48px);
+		background: $text;
+		border: 2px solid $text;
+		color: $bg;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		svg {
+			@include transition;
+			fill: $bg;
+		}
+		&:hover {
+			background-color: $bg;
+			color: $text;
+			svg {
+				fill: $text;
+			}
+		}
+	}
+}
