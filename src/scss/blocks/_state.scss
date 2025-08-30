@@ -2,23 +2,43 @@
 
 .state {
 	padding: 120px 0 58px 0;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 	&__block {
 		padding: 120px 46px;
 		width: 100%;
 		height: 572px;
 		border-radius: 14px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media (max-width: 991px) {
+			padding: 60px 24px;
+			height: 400px;
+			background-position: bottom !important;
+		}
 	}
 
 	&__title {
 		max-width: 400px;
 		@include text-style(67px, 700, 67px);
 		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			max-width: 100%;
+			@include text-style(48px, 700, 50px);
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
 		max-width: 400px;
 		@include text-style(22px, 600, normal);
 		margin-bottom: 60px;
+		@media (max-width: 991px) {
+			max-width: 100%;
+			@include text-style(18px, 600, 20px);
+			margin-bottom: 20px;
+		}
 	}
 
 	&__btn {
@@ -32,6 +52,9 @@
 		&:hover {
 			background-color: transparent;
 			color: $accent;
+		}
+		@media (max-width: 991px) {
+			height: 60px;
 		}
 	}
 }

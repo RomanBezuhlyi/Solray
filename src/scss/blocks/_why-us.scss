@@ -2,13 +2,23 @@
 
 .why-us {
 	padding: 120px 0;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 	&__title {
 		@include text-style(40px, 700, 50px, center);
 		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px, center);
+			margin-bottom: 30px;
+		}
 	}
 
 	&__list {
 		row-gap: 55px;
+		@media (max-width: 991px) {
+			row-gap: 30px;
+		}
 	}
 
 	&__item {
@@ -20,6 +30,10 @@
 		p {
 			padding: 0 25px;
 			@include text-style(17px, 600, 23px, center);
+			@media (max-width: 991px) {
+				@include text-style(14px, 600, 16px, center);
+				padding: 0 12px;
+			}
 		}
 	}
 
@@ -38,5 +52,31 @@
 	&__item:nth-child(5)::before,
 	&__item:nth-child(9)::before {
 		content: none;
+		@media (max-width: 991px) {
+			content: '';
+		}
+	}
+
+	&__item:nth-child(3)::before,
+	&__item:nth-child(6)::before,
+	&__item:nth-child(9)::before {
+		content: none;
+		@media (max-width: 991px) {
+			content: none;
+		}
+		@media (max-width: 768px) {
+			content: '';
+		}
+	}
+
+	&__item:nth-child(2)::before,
+	&__item:nth-child(4)::before,
+	&__item:nth-child(6)::before,
+	&__item:nth-child(8)::before,
+	&__item:nth-child(9)::before {
+		content: none;
+		@media (max-width: 768px) {
+			content: none;
+		}
 	}
 }

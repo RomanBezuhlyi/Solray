@@ -2,19 +2,33 @@
 
 .articles {
 	padding: 120px 0;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 	&__title {
 		@include text-style(40px, 700, 50px, center);
 		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px, center);
+			margin-bottom: 20px;
+		}
 	}
 
 	&__list {
 		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+			row-gap: 20px;
+		}
 	}
 
 	&__item-img {
 		@include box(100%, 260px, 14px);
 		object-fit: cover;
 		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
 	}
 
 	&__item-date {
@@ -25,6 +39,9 @@
 
 	&__item-title {
 		@include text-style(18px, 600, 26px);
+		@media (max-width: 991px) {
+			@include text-style(16px, 600, 20px);
+		}
 	}
 
 	&__item-text {
@@ -35,6 +52,10 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		margin-bottom: 12px;
+		@media (max-width: 991px) {
+			@include text-style(14px, 300, 18px);
+			margin-bottom: 8px;
+		}
 	}
 
 	&__item-link {
@@ -59,6 +80,10 @@
 		&:hover {
 			background-color: transparent;
 			color: $text;
+		}
+		@media (max-width: 600px) {
+			width: 100%;
+			height: 60px;
 		}
 	}
 }

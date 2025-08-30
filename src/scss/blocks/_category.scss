@@ -6,17 +6,30 @@
 	background-image: url('./img/category.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 	&__title {
 		color: $bg;
 		@include text-style(40px, 700, 50px, center);
 		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px, center);
+			margin-bottom: 30px;
+		}
 	}
 
 	&__list {
 		row-gap: 50px;
+		@media (max-width: 991px) {
+			row-gap: 30px;
+			gap: 30px;
+			justify-content: center;
+		}
 	}
 
 	&__item {
+		@include flex(column, flex-start, center);
 	}
 
 	&__item-link {
@@ -45,6 +58,10 @@
 		&:hover {
 			background-color: $bg;
 			color: $text;
+		}
+		@media (max-width: 600px) {
+			width: 100%;
+			height: 60px;
 		}
 	}
 }

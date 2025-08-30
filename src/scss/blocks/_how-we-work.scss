@@ -2,19 +2,32 @@
 
 .how-we-work {
 	padding-bottom: 120px;
+	@media (max-width: 991px) {
+		padding-bottom: 60px;
+	}
 	&__title {
 		@include text-style(40px, 700, normal, center);
 		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+			margin-bottom: 30px;
+		}
 	}
 
 	&__list {
 		gap: 45px;
+		@media (max-width: 991px) {
+			gap: 20px;
+		}
 	}
 
 	&__item {
 		position: relative;
 		max-width: 204px;
 		@include flex(column, flex-start, center);
+		@media (max-width: 600px) {
+			max-width: 100%;
+		}
 		img {
 			margin-bottom: 24px;
 		}
@@ -24,6 +37,9 @@
 		}
 		p {
 			@include text-style(17px, 600, 23px, center);
+			@media (max-width: 991px) {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -34,5 +50,8 @@
 		transform: translateY(-50%);
 		right: -30px;
 		content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='50' viewBox='0 0 15 50' fill='none'><path d='M13.4999 25L0.5 50H1.49998L14.4999 25H13.4999Z' fill='%23E7E7E7'/><path d='M14.4999 25L1.49998 0H0.5L13.4999 25H14.4999Z' fill='%23E7E7E7'/></svg>");
+		@media (max-width: 600px) {
+			display: none;
+		}
 	}
 }

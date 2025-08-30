@@ -3,23 +3,41 @@
 .action {
 	padding: 120px 0;
 	background: #fafafa;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 	&__title {
 		@include text-style(40px, 700, 50px, center);
 		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px, center);
+			margin-bottom: 30px;
+		}
 	}
 
 	&__cards {
 		@include flex(row, center, center, 30px);
+		flex-wrap: wrap;
+		@media (max-width: 991px) {
+			gap: 20px;
+		}
 	}
 
 	&__card-large {
 		position: relative;
 		width: 365px;
 		height: 673px;
+		border-radius: 15px;
+		object-fit: cover;
+		overflow: hidden;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 		img {
 			position: absolute;
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
 		}
 		.action__card-info {
 			padding: 36px 52px 0 20px;
@@ -38,16 +56,29 @@
 
 	&__cards-right {
 		@include flex(column, center, center, 30px);
+		@media (max-width: 991px) {
+			gap: 20px;
+		}
 	}
 
 	&__cards-top {
 		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
 	}
 
 	&__card-medium {
 		position: relative;
 		width: 480px;
 		height: 322px;
+		border-radius: 15px;
+		object-fit: cover;
+		overflow: hidden;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 		img {
 			position: absolute;
 			width: 100%;
@@ -55,6 +86,9 @@
 		}
 		.action__card-info {
 			padding: 36px 224px 0 20px;
+			@media (max-width: 768px) {
+				padding: 36px 100px 0 20px;
+			}
 		}
 		h4 {
 			position: relative;
@@ -72,6 +106,12 @@
 		position: relative;
 		width: 292px;
 		height: 322px;
+		border-radius: 15px;
+		object-fit: cover;
+		overflow: hidden;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 		img {
 			position: absolute;
 			width: 100%;
@@ -94,6 +134,11 @@
 
 	&__cards-bottom {
 		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+			gap: 20px;
+			width: 100%;
+		}
 	}
 
 	&__btn {
@@ -107,6 +152,10 @@
 		&:hover {
 			background-color: $text;
 			color: $bg;
+		}
+		@media (max-width: 600px) {
+			width: 100%;
+			height: 60px;
 		}
 	}
 }

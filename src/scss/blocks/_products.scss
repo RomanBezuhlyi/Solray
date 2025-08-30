@@ -2,15 +2,25 @@
 
 .products {
 	padding: 120px 0;
+	@media (max-width: 991px) {
+		padding: 60px 0;
+	}
 
 	&__title {
 		@include text-style(40px, 700, 50px);
 		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px);
+			margin-bottom: 10px;
+		}
 	}
 
 	&__swiper {
 		position: relative;
 		padding: 30px 20px;
+		@media (max-width: 991px) {
+			padding: 20px 10px;
+		}
 	}
 
 	&__prev {
@@ -48,5 +58,8 @@
 		height: 100%;
 		background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 		z-index: 1;
+		@media (max-width: 991px) {
+			display: none;
+		}
 	}
 }
