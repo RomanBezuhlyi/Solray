@@ -554,6 +554,9 @@ button {
   line-height: normal;
   text-align: left;
 }
+.header-mobile-top__search-input:focus {
+  border-color: #121212;
+}
 .header-mobile-top__search-icon {
   position: absolute;
   top: 50%;
@@ -1098,7 +1101,7 @@ button {
   }
 }
 
-.category {
+.categories {
   padding: 120px 0;
   background: #1a1c1e;
   background-image: url("./img/category.png");
@@ -1106,11 +1109,11 @@ button {
   background-size: cover;
 }
 @media (max-width: 991px) {
-  .category {
+  .categories {
     padding: 60px 0;
   }
 }
-.category__title {
+.categories__title {
   color: #fff;
   font-size: 40px;
   font-weight: 700;
@@ -1119,7 +1122,7 @@ button {
   margin-bottom: 50px;
 }
 @media (max-width: 991px) {
-  .category__title {
+  .categories__title {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
@@ -1127,30 +1130,30 @@ button {
     margin-bottom: 30px;
   }
 }
-.category__list {
+.categories__list {
   row-gap: 50px;
 }
 @media (max-width: 991px) {
-  .category__list {
+  .categories__list {
     row-gap: 30px;
     gap: 30px;
     justify-content: center;
   }
 }
-.category__item {
+.categories__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 0;
 }
-.category__item-link img {
+.categories__item-link img {
   width: 204px;
   height: 204px;
   object-fit: cover;
   margin-bottom: 24px;
 }
-.category__item-link p {
+.categories__item-link p {
   max-width: 204px;
   color: #fff;
   font-size: 17px;
@@ -1158,7 +1161,7 @@ button {
   line-height: 23px;
   text-align: center;
 }
-.category__btn {
+.categories__btn {
   margin: auto;
   margin-top: 50px;
   display: flex;
@@ -1178,12 +1181,12 @@ button {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.category__btn:hover {
+.categories__btn:hover {
   background-color: #fff;
   color: #121212;
 }
 @media (max-width: 600px) {
-  .category__btn {
+  .categories__btn {
     width: 100%;
     height: 60px;
   }
