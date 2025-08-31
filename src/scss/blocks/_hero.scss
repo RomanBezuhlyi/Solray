@@ -7,6 +7,9 @@
 	height: 760px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@media (max-width: 1024px) {
+		top: 0;
+	}
 	@media (max-width: 991px) {
 		height: 600px;
 		background-position: bottom;

@@ -1,0 +1,209 @@
+@use '../abstracts' as *;
+
+.header-mobile {
+	display: none;
+	@media (max-width: 1024px) {
+		display: block;
+		padding: 12px;
+		background: $bg;
+		box-shadow: 1px 2px 9px 0 rgba(18, 18, 18, 0.06);
+	}
+}
+.header-mobile-top {
+	&__row {
+		@include flex(row, space-between, center);
+	}
+
+	&__logo {
+		width: 54.083px;
+		height: 44px;
+		flex-shrink: 0;
+		aspect-ratio: 59/48;
+	}
+
+	&__nav {
+		@include flex(row, center, center);
+	}
+
+	&__item {
+		@include center;
+	}
+
+	&__item:nth-child(1) {
+		padding-right: 16px;
+	}
+
+	&__item:nth-child(2) {
+		padding: 0 16px;
+		border-right: 1px solid #ececec;
+		border-left: 1px solid #ececec;
+		border-radius: 4px;
+	}
+
+	&__item:nth-child(3) {
+		padding-left: 16px;
+	}
+
+	.search {
+		@include center;
+	}
+
+	.location {
+		@include flex(row, center, center, 6px);
+		span {
+			color: $accent;
+			@include text-style(14px, 600, normal);
+		}
+	}
+
+	.phone {
+		@include center;
+	}
+
+	&__burger {
+		@include center;
+	}
+
+	&__search-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $bg;
+		box-shadow: 1px 2px 9px 0 rgba(18, 18, 18, 0.06);
+		opacity: 0;
+		pointer-events: none;
+		@include transition;
+		&.open-search {
+			@include transition;
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
+	&__search {
+		position: relative;
+		top: 10px;
+		width: 100%;
+	}
+
+	&__search-input {
+		width: 100%;
+		@include box(100%, 48px, 30px);
+		padding: 12px 24px;
+		border: 1px solid #7d7d7d;
+		background: $bg;
+		@include text-style(14px, 400, normal);
+		&::placeholder {
+			color: #7d7d7d;
+			@include text-style(14px, 400, normal);
+		}
+		&:focus {
+			border-color: $text;
+		}
+	}
+
+	&__search-icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 24px;
+	}
+}
+
+.header-mobile-menu {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 111;
+	background: $bg;
+	opacity: 0;
+	pointer-events: none;
+	@include transition;
+	&.open-menu {
+		opacity: 1;
+		pointer-events: all;
+		@include transition;
+	}
+	&__top {
+		@include flex(row, space-between, center);
+		padding: 24px;
+		border-radius: 14px;
+	}
+
+	&__close {
+		@include center;
+	}
+
+	&__nav {
+		@include flex(column, center, center, 24px);
+	}
+
+	&__item {
+		@include text-style(14px, 400, normal);
+	}
+}
+
+.header-mobile-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	&__bg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	&__calc {
+		position: absolute;
+		bottom: 37px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include flex(column, center, center);
+		@include box(52px, 52px, 170px);
+		padding: 5px 0;
+		background: $bg;
+		span {
+			@include text-style(10px, 500, normal, center);
+		}
+	}
+
+	&__nav {
+		position: relative;
+		bottom: 11px;
+		z-index: 101;
+		width: 100%;
+		@include flex(row, space-between, flex-end);
+	}
+
+	&__wrap {
+		@include flex(row, space-between, flex-end, 20px);
+	}
+
+	&__item {
+		@include flex(column, flex-end, center, 2px);
+		width: 53px;
+		height: 44px;
+		color: rgba(255, 255, 255, 0.5);
+		@include text-style(10px, 500, normal, center);
+		@include transition;
+
+		svg {
+			stroke: $bg;
+			stroke-opacity: 0.5;
+			@include transition;
+		}
+
+		&:hover {
+			color: $bg;
+			svg {
+				stroke-opacity: 1;
+			}
+		}
+	}
+}

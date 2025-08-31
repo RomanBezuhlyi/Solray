@@ -1,19 +1,27 @@
-export function initLangSwitch() {
-	const switcher = document.querySelector('.header__top-lang')
-	const button = switcher.querySelector('.header__top-lang__button')
-	const list = switcher.querySelector('.header__top-lang__list')
-	const current = switcher.querySelector('.header__top-lang__current')
+export function initLangSwitches() {
+	const switches = document.querySelectorAll('.lang-switch')
 
-	button.addEventListener('click', () => {
-		list.classList.toggle('header__top-lang__list--open')
-		switcher.classList.toggle('header__top-lang--open')
-	})
+	switches.forEach(switcher => {
+		const button = switcher.querySelector('.lang-switch__btn')
+		const list = switcher.querySelector('.lang-switch__list')
+		const current = switcher.querySelector('.lang-switch__current')
 
-	list.addEventListener('click', e => {
-		if (e.target.classList.contains('header__top-lang__item')) {
-			current.textContent = e.target.dataset.lang
-			list.classList.remove('header__top-lang__list--open')
-			switcher.classList.remove('header__top-lang--open')
-		}
+		button.addEventListener('click', () => {
+			list.classList.toggle('open')
+		})
+
+		list.addEventListener('click', e => {
+			if (e.target.classList.contains('lang-switch__item')) {
+				current.textContent = e.target.dataset.lang
+				list.classList.remove('open')
+			}
+		})
+
+		// Закриття при кліку поза елементом
+		document.addEventListener('click', e => {
+			if (!switcher.contains(e.target)) {
+				list.classList.remove('open')
+			}
+		})
 	})
 }
