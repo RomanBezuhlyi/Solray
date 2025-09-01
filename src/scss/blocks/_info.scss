@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .info {
+	overflow: hidden;
 	padding: 60px 0;
 	background: #fafafa;
 	@media (max-width: 991px) {

@@ -172,6 +172,7 @@
 	}
 
 	&__bottom-wrap {
+		background: $text;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		position: relative;
 		z-index: 11;
@@ -187,5 +188,9 @@
 		padding: 0 10px;
 		color: $bg;
 		@include text-style(16px, 400, normal);
+		@include transition;
+		&:hover {
+			background-color: $accent;
+		}
 	}
 }

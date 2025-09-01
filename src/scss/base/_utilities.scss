@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .d-flex {
 	display: flex;
 }
@@ -58,6 +60,81 @@
 
 		&:hover {
 			background: #eee;
+		}
+	}
+}
+
+.filter-group {
+	@include flex(row, center, center, 8px);
+	@media (max-width: 991px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	label {
+		display: block;
+		color: #121212;
+		@include text-style(13px, 600, normal);
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: block;
+
+	.dropdown-toggle {
+		@include flex(row, space-between, center, 10px);
+		background-color: $bg;
+		border: 1px solid #d0d0d0;
+		height: 32px;
+		border-radius: 4px;
+		padding: 0 12px;
+		cursor: pointer;
+		@include text-style(13px, 400, normal);
+
+		.arrow-icon {
+			@include transition;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.dropdown-menu {
+		display: none;
+		position: absolute;
+		top: 110%;
+		left: 0;
+		min-width: 100%;
+		width: 100%;
+		background-color: $bg;
+		border: 1px solid #d0d0d0;
+		border-radius: 4px;
+		z-index: 1000;
+
+		li {
+			list-style: none;
+
+			a {
+				display: block;
+				padding: 8px 12px;
+				@include text-style(13px, 400, normal);
+
+				&:hover {
+					background-color: #d0d0d0;
+				}
+			}
+		}
+	}
+
+	&.open {
+		.dropdown-menu {
+			display: block;
+		}
+
+		.arrow-icon {
+			transform: rotateX(180deg);
 		}
 	}
 }
