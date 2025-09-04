@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+.small-form {
+	padding: 120px 0;
+	background: #1a1c1e url(../../img/footer.png) 0px -276.815px / 100% 159.275% no-repeat;
+	@media (max-width: 991px) {
+		padding: 36px 0;
+		background: #1a1c1e;
+	}
+
+	&__title {
+		margin: auto;
+		max-width: 681px;
+		color: #fffefe;
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 24px;
+		@media (max-width: 991px) {
+			@include text-style(36px, 700, 36px, center);
+		}
+	}
+
+	&__text {
+		color: $bg;
+		@include text-style(22px, 600, normal, center);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, normal, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__form {
+		@include flex(row, center, center, 12px);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__form-input {
+		@include center;
+		@include box(380px, 70px, 50px);
+		padding: 0 32px;
+		color: $bg;
+		@include text-style(16px, 400, normal);
+		border: 1.5px solid #9c9a9a;
+		&::placeholder {
+			color: #999798;
+			@include text-style(16px, 400, normal);
+		}
+		&:focus {
+			border-color: $bg;
+		}
+		@media (max-width: 991px) {
+			@include box(100%, 60px);
+		}
+	}
+
+	&__form-input-btn {
+		position: relative;
+		width: 516px;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+		input {
+			@include center;
+			@include box(100%, 70px, 50px);
+			padding: 0 32px;
+			color: $bg;
+			@include text-style(16px, 400, normal);
+			border: 1.5px solid #9c9a9a;
+			&::placeholder {
+				color: #999798;
+				@include text-style(16px, 400, normal);
+			}
+			&:focus {
+				border-color: $bg;
+			}
+			@media (max-width: 991px) {
+				height: 60px;
+			}
+		}
+		button {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			@include center;
+			@include box(281px, 60px, 48px);
+			background: $accent;
+			border: 2px solid $accent;
+			color: $bg;
+			@include text-style(16px, 600, normal, center);
+			@include transition;
+			&:hover {
+				background-color: transparent;
+				color: $accent;
+			}
+			@media (max-width: 991px) {
+				@include box(100%, 60px);
+				position: static;
+				margin-top: 12px;
+			}
+		}
+	}
+}

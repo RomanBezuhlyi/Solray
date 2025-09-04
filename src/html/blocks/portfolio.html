@@ -1,0 +1,104 @@
+<section class="portfolio">
+	<div class="container">
+		<h2 class="portfolio__title">Примеры наших работ</h2>
+		<div class="portfolio__cards">
+			<!-- Велика карта -->
+			<div class="portfolio__card-large">
+				<a
+					href="./img/p-1.png"
+					data-fancybox="portfolio"
+					data-caption="Пример 1"
+				>
+					<img src="./img/p-1.png" alt="Пример 1" />
+					<span class="loop">
+						<img src="./img/loop.svg" alt="Открыть" />
+					</span>
+				</a>
+			</div>
+
+			<!-- Правая часть -->
+			<div class="portfolio__cards-right">
+				<!-- Верхняя карта -->
+				<div class="portfolio__cards-top">
+					<div class="portfolio__card-medium">
+						<a
+							href="./img/p-2.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 2"
+						>
+							<img src="./img/p-2.png" alt="Пример 2" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Нижние карты -->
+				<div class="portfolio__cards-bottom">
+					<div class="portfolio__card-small">
+						<a
+							href="./img/p-3.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 3"
+						>
+							<img src="./img/p-3.png" alt="Пример 3" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+
+					<div class="portfolio__card-small">
+						<a
+							href="./img/p-4.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 4"
+						>
+							<img src="./img/p-4.png" alt="Пример 4" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="portfolio__btn btn-outline" href="#">Смотреть все</a>
+	</div>
+</section>
+
+<!-- Підключення Fancybox -->
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script>
+	// Ініціалізація Fancybox
+	Fancybox.bind("[data-fancybox='portfolio']", {
+		Toolbar: {
+			display: [
+				{ id: 'counter', position: 'center' },
+				'zoom',
+				'slideshow',
+				'fullscreen',
+				'download',
+				'thumbs',
+				'close',
+			],
+		},
+		Thumbs: {
+			autoStart: false,
+		},
+	})
+
+	// Додатково: клік на кнопку всередині <a> не блокує відкриття
+	document.querySelectorAll('.loop').forEach(btn => {
+		btn.addEventListener('click', e => {
+			e.stopPropagation() // не заважати кліку по <a>
+		})
+	})
+</script>

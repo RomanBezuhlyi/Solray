@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.for-whom {
+	padding-bottom: 120px;
+	@media (max-width: 991px) {
+		padding-bottom: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, normal);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+
+	&__card {
+		position: relative;
+		@include box(380px, 260px, 14px);
+		background: linear-gradient(295deg, #dedee0 1.24%, #f5f5f5 65.83%);
+		padding: 24px;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+		p {
+			position: relative;
+			z-index: 2;
+			@include text-style(14px, 600, normal);
+		}
+	}
+	.left {
+		@include flex(row, flex-start, center);
+		img {
+			position: absolute;
+			right: 20px;
+			bottom: 0;
+		}
+		p {
+			max-width: 190px;
+			text-align: left;
+		}
+	}
+	.center {
+		@include flex(column, flex-start, center);
+		img {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+		}
+		p {
+			max-width: 266px;
+			text-align: center;
+		}
+	}
+	.right {
+		@include flex(row, flex-end, center);
+		img {
+			position: absolute;
+			left: 20px;
+			bottom: 0;
+		}
+		p {
+			width: 222px;
+			text-align: right;
+		}
+	}
+}

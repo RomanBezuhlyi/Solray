@@ -1,0 +1,146 @@
+@use '../abstracts' as *;
+
+.portfolio {
+	padding-bottom: 120px;
+	@media (max-width: 991px) {
+		padding-bottom: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 30px, center);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__cards {
+		@include flex(row, center, center, 30px);
+		flex-wrap: wrap;
+		@media (max-width: 991px) {
+			gap: 20px;
+			flex-direction: column;
+		}
+	}
+
+	&__card-large {
+		position: relative;
+		@include box(380px, 550px, 15px);
+		object-fit: cover;
+		overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		img {
+			position: absolute;
+			@include box(100%);
+			object-fit: cover;
+			@include transition;
+		}
+		.loop {
+			position: absolute;
+			top: 0;
+			right: 24px;
+			@include box(60px);
+		}
+	}
+
+	&__cards-right {
+		@include flex(column, center, center, 30px);
+		@media (max-width: 991px) {
+			gap: 20px;
+			width: 100%;
+		}
+	}
+
+	&__cards-top {
+		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+			gap: 20px;
+			width: 100%;
+		}
+	}
+
+	&__card-medium {
+		position: relative;
+		@include box(790px, 260px, 15px);
+		object-fit: cover;
+		overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		img {
+			position: absolute;
+			@include box(100%);
+			object-fit: cover;
+			@include transition;
+		}
+		.loop {
+			position: absolute;
+			top: 0;
+			right: 24px;
+			@include box(60px);
+		}
+	}
+
+	&__card-small {
+		position: relative;
+		@include box(380px, 260px, 15px);
+		object-fit: cover;
+		overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+		@media (max-width: 991px) {
+			width: 48%;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		img {
+			position: absolute;
+			@include box(100%);
+			object-fit: cover;
+			@include transition;
+		}
+		.loop {
+			position: absolute;
+			top: 0;
+			right: 24px;
+			@include box(60px);
+		}
+	}
+
+	&__cards-bottom {
+		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+			gap: 20px;
+			width: 100%;
+		}
+	}
+
+	&__btn {
+		margin-top: 50px;
+	}
+}
+.portfolio-page {
+	padding-top: 20px;
+	background-color: $bg;
+}

@@ -35,6 +35,9 @@
 				padding: 0 12px;
 			}
 		}
+		p > span {
+			color: $accent;
+		}
 	}
 
 	&__item::before {

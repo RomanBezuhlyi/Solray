@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.install {
+	padding-bottom: 120px;
+	@include flex(row, space-between, center, 50px);
+	@media (max-width: 1024px) {
+		flex-wrap: wrap;
+	}
+	@media (max-width: 991px) {
+		gap: 30px;
+		padding-bottom: 60px;
+	}
+	&__content {
+		h2 {
+			@include text-style(40px, 700, normal);
+			margin-bottom: 24px;
+			@media (max-width: 991px) {
+				@include text-style(24px, 700, normal);
+				margin-bottom: 12px;
+			}
+		}
+		p {
+			@include text-style(22px, 600, normal);
+			margin-bottom: 24px;
+			@media (max-width: 991px) {
+				@include text-style(16px, 600, normal);
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__img {
+		@include box(672px, 515px, 14px);
+		object-fit: cover;
+		@media (max-width: 991px) {
+			@include box(100%, 400px);
+		}
+	}
+}

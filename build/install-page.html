@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+		<title>Solray</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<header class="header">
+	<div class="header__top-wrap">
+		<div class="container">
+			<div class="header__top">
+				<div class="header__top-left">
+					<div class="lang-switch">
+						<button class="lang-switch__btn" type="button">
+							<span class="lang-switch__current">UK</span>
+							<img
+								src="./img/icons/chev-bottom.svg"
+								alt="Arrow"
+								class="lang-switch__arrow"
+							/>
+						</button>
+						<ul class="lang-switch__list">
+							<li class="lang-switch__item" data-lang="UA">UA</li>
+							<li class="lang-switch__item" data-lang="EN">EN</li>
+							<li class="lang-switch__item" data-lang="RU">RU</li>
+						</ul>
+					</div>
+					<nav class="header__top-nav">
+						<a class="header__top-nav--item" href="#">Отзывы о магазине</a>
+						<a class="header__top-nav--item" href="#">Контакты</a>
+						<a class="header__top-nav--item" href="#">Доставка и оплата</a>
+					</nav>
+					<div class="header__top-city">
+						<p class="header__top-city--label">Ваш город:</p>
+						<a class="header__top-city--value">Киев</a>
+					</div>
+				</div>
+				<div class="header__top-right">
+					<div class="header__top-auth">
+						<a class="header__top-auth--login" href="#">Вход</a>
+						<a class="header__top-auth--reg" href="#">Регистрация</a>
+					</div>
+					<div class="header__top-notification">
+						<a class="header__top-notification--item" href="#">
+							<span>0</span>
+							<img src="./img/icons/arrows.svg" alt="" />
+						</a>
+						<a class="header__top-notification--item" href="#">
+							<span>2</span>
+							<img src="./img/icons/cart.svg" alt="" />
+						</a>
+						<a class="header__top-notification--item" href="#">
+							<span>0</span>
+							<img src="./img/icons/heart.svg" alt="" />
+						</a>
+					</div>
+					<div class="header__top-social">
+						<a class="header__top-social--item" href="#">
+							<img src="./img/icons/facebook.svg" alt="" />
+						</a>
+						<a class="header__top-social--item" href="#">
+							<img src="./img/icons/instagram.svg" alt="" />
+						</a>
+						<a class="header__top-social--item" href="#">
+							<img src="./img/icons/youtube.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__middle-wrap">
+		<div class="container">
+			<div class="header__middle">
+				<a href="#" class="header__middle-logo">
+					<img src="./img/icons/logo.svg" alt="" />
+				</a>
+				<div class="header__middle-search">
+					<input placeholder="Поиск по каталогу магазина" type="text" />
+					<img src="./img/icons/search.svg" alt="" />
+				</div>
+				<div class="header__middle-number">
+					<div class="header__middle-number--top">
+						<p>Отдел продаж</p>
+						<ul>
+							<li><img src="./img/icons/telegram.svg" alt="" /></li>
+							<li><img src="./img/icons/viber.svg" alt="" /></li>
+							<li><img src="./img/icons/whatsapp.svg" alt="" /></li>
+						</ul>
+					</div>
+					<a class="header__middle-number--middle" href="#">(067) 535-31-72</a>
+					<a class="header__middle-number--bottom" href="#">Заказать звонок</a>
+				</div>
+				<div class="header__middle-number">
+					<div class="header__middle-number--top">
+						<p>Техподдержка <span>(24/7)</span></p>
+					</div>
+					<a class="header__middle-number--middle" href="#">(044) 502-03-56</a>
+					<a class="header__middle-number--bottom" href="#"></a>
+				</div>
+				<a class="header__middle-btn" href="#">
+					<img src="./img/icons/calculator.svg" alt="" />
+					Рассчитать теплый пол
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom-wrap">
+		<div class="container">
+			<nav class="header__bottom">
+				<a class="header__bottom-item" href="#">Теплый пол</a>
+				<a class="header__bottom-item" href="#">Терморегуляторы</a>
+				<a class="header__bottom-item" href="#">Материалы</a>
+				<a class="header__bottom-item" href="#">Обогрев труб</a>
+				<a class="header__bottom-item" href="#">Антиобледенение</a>
+				<a class="header__bottom-item" href="#">Коврик с подогревом</a>
+				<a class="header__bottom-item" href="#">Монтаж</a>
+				<a class="header__bottom-item" href="#">Проекты</a>
+				<a class="header__bottom-item" href="#">Опт</a>
+				<a class="header__bottom-item" href="#">Советы</a>
+			</nav>
+		</div>
+	</div>
+</header>
+ <header class="header-mobile">
+	<div class="header-mobile-top">
+		<div class="header-mobile-top__search-block">
+			<div class="container">
+				<div class="header-mobile-top__search">
+					<input
+						class="header-mobile-top__search-input"
+						type="text"
+						placeholder="Поиск по каталогу магазина..."
+					/>
+					<img
+						class="header-mobile-top__search-icon"
+						src="./img/icons/search-dark.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header-mobile-top__row">
+				<a class="header-mobile-top__logo" href="#"
+					><img src="./img/icons/logo.svg" alt=""
+				/></a>
+				<ul class="header-mobile-top__nav">
+					<li class="header-mobile-top__item">
+						<button class="search">
+							<img src="./img/icons/search.svg" alt="" />
+						</button>
+					</li>
+					<li class="header-mobile-top__item">
+						<a class="location" href="#"
+							><img
+								src="./img/icons/шапка/icon-park-outline_local-two.svg"
+								alt=""
+							/>
+							<span>Киев</span>
+						</a>
+					</li>
+					<li class="header-mobile-top__item">
+						<a class="phone" href="tel:0675353172"
+							><img src="./img/icons/шапка/solar_phone-broken.svg" alt=""
+						/></a>
+					</li>
+				</ul>
+				<button class="header-mobile-top__burger">
+					<img
+						src="./img/icons/шапка/heroicons-outline_menu-alt-1.svg"
+						alt=""
+					/>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile-menu">
+		<div class="container">
+			<div class="header-mobile-menu__top">
+				<div class="lang-switch">
+					<button class="lang-switch__btn" type="button">
+						<span class="lang-switch__current">UK</span>
+						<img
+							src="./img/icons/chev-bottom.svg"
+							alt="Arrow"
+							class="lang-switch__arrow"
+						/>
+					</button>
+					<ul class="lang-switch__list">
+						<li class="lang-switch__item" data-lang="UA">UA</li>
+						<li class="lang-switch__item" data-lang="EN">EN</li>
+						<li class="lang-switch__item" data-lang="RU">RU</li>
+					</ul>
+				</div>
+				<button class="header-mobile-menu__close">
+					<img src="./img/icons/iconamoon_close-light.svg" alt="" />
+				</button>
+			</div>
+			<div class="header-mobile-menu__nav">
+				<a class="header-mobile-menu__item" href="#">Теплый пол</a>
+				<a class="header-mobile-menu__item" href="#">Терморегуляторы</a>
+				<a class="header-mobile-menu__item" href="#">Материалы</a>
+				<a class="header-mobile-menu__item" href="#">Обогрев труб</a>
+				<a class="header-mobile-menu__item" href="#">Антиобледенение</a>
+				<a class="header-mobile-menu__item" href="#">Коврик с подогревом</a>
+				<a class="header-mobile-menu__item" href="#">Монтаж</a>
+				<a class="header-mobile-menu__item" href="#">Проекты</a>
+				<a class="header-mobile-menu__item" href="#">Опт</a>
+				<a class="header-mobile-menu__item" href="#">Советы</a>
+				<a class="header-mobile-menu__item" href="#">Отзывы о магазине</a>
+				<a class="header-mobile-menu__item" href="#">Контакты</a>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile-bottom">
+		<img class="header-mobile-bottom__bg" src="./img/icons/menu.svg" alt="" />
+		<a class="header-mobile-bottom__calc" href="#">
+			<img src="./img/icons/calc-menu.svg" alt="" />
+			<span>Расчет</span>
+		</a>
+		<div class="container">
+			<div class="header-mobile-bottom__nav">
+				<div class="header-mobile-bottom__wrap">
+					<a class="header-mobile-bottom__item" href="#">
+						<svg>
+							<use href="/img/icons.svg#icon-menu-1"></use>
+						</svg>
+						Сравнение
+					</a>
+					<a class="header-mobile-bottom__item" href="#">
+						<svg>
+							<use href="/img/icons.svg#icon-heart"></use>
+						</svg>
+						Понравилось
+					</a>
+				</div>
+				<div class="header-mobile-bottom__wrap">
+					<a class="header-mobile-bottom__item" href="#">
+						<svg>
+							<use href="/img/icons.svg#icon-cart"></use>
+						</svg>
+						Корзина
+					</a>
+					<a class="header-mobile-bottom__item" href="#">
+						<svg>
+							<use href="/img/icons.svg#icon-cabinet"></use>
+						</svg>
+						Кабинет
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<main>
+			<section class="breadcrumbs-wrap second">
+	<div class="container">
+		<ul class="breadcrumbs second">
+			<li class="breadcrumbs__item">
+				<a href="#">Главная</a>
+			</li>
+			<li class="breadcrumbs__item">Монтаж</li>
+		</ul>
+	</div>
+</section>
+<section class="install container">
+	<div class="install__content">
+		<h2>Монтаж теплого пола от производителя</h2>
+		<p>Оставляй заявку для заказа монтажа или сопровождении эксперта</p>
+		<button class="btn-accent">Заказать монтаж</button>
+	</div>
+	<img class="install__img" src="./img/install.png" alt="" />
+</section>
+ <section class="why-us">
+	<div class="container">
+		<h2 class="why-us__title">
+			Почему стоит выбрать теплый пол нашего производства
+		</h2>
+		<ul
+			class="why-us__list row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center"
+		>
+			<li class="why-us__item col">
+				<img src="./img/i-1.svg" alt="" />
+				<p>Сертифицированные монтажники <span>(опыт от 7 лет)</span></p>
+			</li>
+			<li class="why-us__item col">
+				<img src="./img/i-2.svg" alt="" />
+				<p>Гарантия на монтаж и продукцию <span>от 2 лет</span></p>
+			</li>
+			<li class="why-us__item col">
+				<img src="./img/i-3.svg" alt="" />
+				<p><span>Фирменные</span> комплектующие и подложки</p>
+			</li>
+			<li class="why-us__item col">
+				<img src="./img/i-4.svg" alt="" />
+				<p>
+					Программируем терморегулятор <span> (Экономия затрат до 60%)</span>
+				</p>
+			</li>
+			<li class="why-us__item col">
+				<img src="./img/i-5.svg" alt="" />
+				<p>Быстрый монтаж <span>(выполняется за 1 день)</span></p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+			<section class="for-whom container">
+	<h2 class="for-whom__title">Для кого подойдет идеально</h2>
+	<ul class="for-whom__list">
+		<div class="for-whom__card left">
+			<p>Опытнй монтажник, но еще не работал с нашим теплым полом</p>
+			<img src="./img/fw.png" alt="" />
+		</div>
+		<div class="for-whom__card center">
+			<p>Опытнй монтажник, но еще не работал с нашим теплым полом</p>
+			<img src="./img/fw2.png" alt="" />
+		</div>
+		<div class="for-whom__card right">
+			<img src="./img/fw3.png" alt="" />
+			<p>Опытнй монтажник, но еще не работал с нашим теплым полом</p>
+		</div>
+	</ul>
+</section>
+ <section class="how-we-work">
+	<div class="container">
+		<h2 class="how-we-work__title">Как мы работаем</h2>
+		<ul
+			class="how-we-work__list row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center"
+		>
+			<li class="how-we-work__item col">
+				<img src="./img/h-1.svg" alt="" />
+				<span>Шаг 1</span>
+				<p>Вы оставляете заявку с пожеляниями</p>
+			</li>
+			<li class="how-we-work__item col">
+				<img src="./img/h-2.svg" alt="" />
+				<span>Шаг 2</span>
+				<p>Мы делаем расчет и схему укладки</p>
+			</li>
+			<li class="how-we-work__item col">
+				<img src="./img/h-3.svg" alt="" />
+				<span>Шаг 3</span>
+				<p>Доставка комплекта теплого пола</p>
+			</li>
+			<li class="how-we-work__item col">
+				<img src="./img/h-4.svg" alt="" />
+				<span>Шаг 4</span>
+				<p>Монтаж, отладка и запуск</p>
+			</li>
+			<li class="how-we-work__item col">
+				<img src="./img/h-5.svg" alt="" />
+				<span>Шаг 5</span>
+				<p>Вы довольный пользователь теплого пола</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+			<section class="portfolio">
+	<div class="container">
+		<h2 class="portfolio__title">Примеры наших работ</h2>
+		<div class="portfolio__cards">
+			<!-- Велика карта -->
+			<div class="portfolio__card-large">
+				<a
+					href="./img/p-1.png"
+					data-fancybox="portfolio"
+					data-caption="Пример 1"
+				>
+					<img src="./img/p-1.png" alt="Пример 1" />
+					<span class="loop">
+						<img src="./img/loop.svg" alt="Открыть" />
+					</span>
+				</a>
+			</div>
+
+			<!-- Правая часть -->
+			<div class="portfolio__cards-right">
+				<!-- Верхняя карта -->
+				<div class="portfolio__cards-top">
+					<div class="portfolio__card-medium">
+						<a
+							href="./img/p-2.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 2"
+						>
+							<img src="./img/p-2.png" alt="Пример 2" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Нижние карты -->
+				<div class="portfolio__cards-bottom">
+					<div class="portfolio__card-small">
+						<a
+							href="./img/p-3.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 3"
+						>
+							<img src="./img/p-3.png" alt="Пример 3" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+
+					<div class="portfolio__card-small">
+						<a
+							href="./img/p-4.png"
+							data-fancybox="portfolio"
+							data-caption="Пример 4"
+						>
+							<img src="./img/p-4.png" alt="Пример 4" />
+							<span class="loop">
+								<img src="./img/loop.svg" alt="Открыть" />
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="portfolio__btn btn-outline" href="#">Смотреть все</a>
+	</div>
+</section>
+
+<!-- Підключення Fancybox -->
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script>
+	// Ініціалізація Fancybox
+	Fancybox.bind("[data-fancybox='portfolio']", {
+		Toolbar: {
+			display: [
+				{ id: 'counter', position: 'center' },
+				'zoom',
+				'slideshow',
+				'fullscreen',
+				'download',
+				'thumbs',
+				'close',
+			],
+		},
+		Thumbs: {
+			autoStart: false,
+		},
+	})
+
+	// Додатково: клік на кнопку всередині <a> не блокує відкриття
+	document.querySelectorAll('.loop').forEach(btn => {
+		btn.addEventListener('click', e => {
+			e.stopPropagation() // не заважати кліку по <a>
+		})
+	})
+</script>
+ <section class="reviews">
+	<div class="container">
+		<div class="reviews__top">
+			<h2 class="reviews__title">Последние отзывы</h2>
+			<div class="reviews__nav">
+				<button class="reviews__nav-prev">
+					<img src="./img/arrow-l.svg" alt="" />
+				</button>
+				<button class="reviews__nav-next">
+					<img src="./img/arrow-r.svg" alt="" />
+				</button>
+			</div>
+		</div>
+		<div class="swiper swiperReviews reviews__slider">
+			<ul class="swiper-wrapper reviews__wrap">
+				<li class="swiper-slide reviews__item">
+					<div class="reviews__item-top">
+						<img
+							class="reviews__item-avatar"
+							src="./img/review-user.png"
+							alt=""
+						/>
+						<p class="reviews__item-name">Наталия Дехтяренко</p>
+					</div>
+					<div class="reviews__item-rate">
+						<ul class="reviews__item-stars">
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star.svg" alt="" />
+							</li>
+						</ul>
+						<span class="reviews__item-date">25.06.25</span>
+					</div>
+					<div class="reviews__item-text">
+						Отлично просчитали теплый пол на нашим параметрам. Очень адекватный
+						приятный менеджер! Сразу все было в наличии! Хорошие впечатления о
+						компании. На сайте указано что не работают в выходной, позвонили и
+						менеджер вышел на работу в выходной день.
+					</div>
+				</li>
+				<li class="swiper-slide reviews__item">
+					<div class="reviews__item-top">
+						<img
+							class="reviews__item-avatar"
+							src="./img/review-user.png"
+							alt=""
+						/>
+						<p class="reviews__item-name">Наталия Дехтяренко</p>
+					</div>
+					<div class="reviews__item-rate">
+						<ul class="reviews__item-stars">
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star.svg" alt="" />
+							</li>
+						</ul>
+						<span class="reviews__item-date">25.06.25</span>
+					</div>
+					<div class="reviews__item-text">
+						Отлично просчитали теплый пол на нашим параметрам. Очень адекватный
+						приятный менеджер! Сразу все было в наличии! Хорошие впечатления о
+						компании. На сайте указано что не работают в выходной, позвонили и
+						менеджер вышел на работу в выходной день.
+					</div>
+				</li>
+				<li class="swiper-slide reviews__item">
+					<div class="reviews__item-top">
+						<img
+							class="reviews__item-avatar"
+							src="./img/review-user.png"
+							alt=""
+						/>
+						<p class="reviews__item-name">Наталия Дехтяренко</p>
+					</div>
+					<div class="reviews__item-rate">
+						<ul class="reviews__item-stars">
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star.svg" alt="" />
+							</li>
+						</ul>
+						<span class="reviews__item-date">25.06.25</span>
+					</div>
+					<div class="reviews__item-text">
+						Отлично просчитали теплый пол на нашим параметрам. Очень адекватный
+						приятный менеджер! Сразу все было в наличии! Хорошие впечатления о
+						компании. На сайте указано что не работают в выходной, позвонили и
+						менеджер вышел на работу в выходной день.
+					</div>
+				</li>
+				<li class="swiper-slide reviews__item">
+					<div class="reviews__item-top">
+						<img
+							class="reviews__item-avatar"
+							src="./img/review-user.png"
+							alt=""
+						/>
+						<p class="reviews__item-name">Наталия Дехтяренко</p>
+					</div>
+					<div class="reviews__item-rate">
+						<ul class="reviews__item-stars">
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star-gold.svg" alt="" />
+							</li>
+							<li class="reviews__item-star">
+								<img src="./img/star.svg" alt="" />
+							</li>
+						</ul>
+						<span class="reviews__item-date">25.06.25</span>
+					</div>
+					<div class="reviews__item-text">
+						Отлично просчитали теплый пол на нашим параметрам. Очень адекватный
+						приятный менеджер! Сразу все было в наличии! Хорошие впечатления о
+						компании. На сайте указано что не работают в выходной, позвонили и
+						менеджер вышел на работу в выходной день.
+					</div>
+				</li>
+			</ul>
+		</div>
+		<button class="btn-primary">Смотреть все</button>
+	</div>
+</section>
+
+			<section class="small-form">
+	<div class="container">
+		<h2 class="small-form__title">
+			Монтаж в подарок при покупке нашего теплого пола
+		</h2>
+		<p class="small-form__text">
+			Оставляй заявку или звони для уточнения деталей
+		</p>
+		<form class="small-form__form">
+			<input class="small-form__form-input" type="text" placeholder="Имя" />
+			<div class="small-form__form-input-btn">
+				<input type="text" placeholder="Телефон" data-phone-input />
+				<button type="submit">Задать вопрос</button>
+			</div>
+		</form>
+	</div>
+</section>
+
+			<section class="products" style="padding-bottom: 0">
+	<div class="container">
+		<h2 class="products__title">Вас могут заинтересовать эти товары</h2>
+		<div class="products__swiper swiper swiperProducts1">
+			<button class="products__prev">
+				<img src="./img/arrow-l.svg" alt="" />
+			</button>
+			<div class="swiper-wrapper">
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag recomm">Рекомендуем</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag new">Новинка</div>
+						<button class="catalog__item-heart active">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock out-stock">под заказ</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag recomm">Рекомендуем</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag new">Новинка</div>
+						<button class="catalog__item-heart active">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock out-stock">под заказ</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+			</div>
+			<button class="products__next">
+				<img src="./img/arrow-r.svg" alt="" />
+			</button>
+			<div class="products__overlay"></div>
+		</div>
+	</div>
+</section>
+<section class="products">
+	<div class="container">
+		<h2 class="products__title">Просмотренные товары</h2>
+		<div class="products__swiper swiper swiperProducts2">
+			<button class="products__prev">
+				<img src="./img/arrow-l.svg" alt="" />
+			</button>
+			<div class="swiper-wrapper">
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag recomm">Рекомендуем</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag new">Новинка</div>
+						<button class="catalog__item-heart active">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock out-stock">под заказ</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag recomm">Рекомендуем</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag new">Новинка</div>
+						<button class="catalog__item-heart active">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock out-stock">под заказ</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide catalog__item col-md-3">
+					<div class="catalog__item-top">
+						<div class="catalog__item-tag hit">Хит</div>
+						<button class="catalog__item-heart">
+							<svg>
+								<use href="/img/icons.svg#icon-heart"></use>
+							</svg>
+						</button>
+						<img class="catalog__item-img" src="./img/item.png" alt="" />
+						<div class="catalog__item-overlay">
+							<button class="catalog__item-btn--buy">
+								<svg>
+									<use href="/img/icons.svg#icon-cart"></use>
+								</svg>
+								Купить
+							</button>
+							<button class="catalog__item-btn--view">Быстрый просмотр</button>
+						</div>
+					</div>
+					<div class="catalog__item-bottom">
+						<p class="catalog__item-name">
+							Терморегулятор BHT-2000 black Wi-FI (программируемый)
+						</p>
+						<p class="catalog__item-stock in-stock">в наличии</p>
+						<div class="catalog__item-footer">
+							<p class="catalog__item-price">3 318 <span>₴</span></p>
+							<p class="catalog__item-rate">
+								<svg>
+									<use href="/img/icons.svg#icon-star"></use>
+								</svg>
+								5 (1)
+							</p>
+						</div>
+					</div>
+				</li>
+			</div>
+			<button class="products__next">
+				<img src="./img/arrow-r.svg" alt="" />
+			</button>
+			<div class="products__overlay"></div>
+		</div>
+	</div>
+</section>
+
+			<section class="info">
+	<div class="container">
+		<div class="info__block">
+			<img class="info__block-img" src="./img/info-2.png" alt="" />
+			<div class="info__block-content">
+				<p>
+					Система инфракрасного теплого пола делает возможным равномерное
+					распределение тепла по всей площади помещения. Заметим, что обычные
+					батареи неспособны обеспечить одинаковую температуру по всей высоте
+					комнате от пола до потолка – воздух циркулирует от батареи вверх.
+					Соответственно воздух на уровне головы сухой и теплый, а ноги зачастую
+					мерзнут.<br /><br />
+					Однако далеко не всем известно, чем же инфракрасный пол с подогревом
+					лучше других видов теплых полов. <br /><br />
+					Система инфракрасного теплого пола делает возможным равномерное
+					распределение тепла по всей площади помещения. ...
+				</p>
+				<button class="info__block-content--btn btn-outline">
+					Читать полностью
+				</button>
+				<span class="overlay active"></span>
+			</div>
+		</div>
+		<ul class="info__tags">
+			<li class="info__tag">Облако тегов</li>
+			<li class="info__tag">электрический теплый пол</li>
+			<li class="info__tag">теплый пол в частный дом</li>
+			<li class="info__tag">как выбрать теплый пол под ламинат</li>
+			<li class="info__tag">Wi-Fi терморегуляторы для теплых полов</li>
+			<li class="info__tag">теплый пол Хемщтед</li>
+			<li class="info__tag">электрический теплый пол Feni</li>
+			<li class="info__tag">теплый пол Вайзел</li>
+			<li class="info__tag">теплый пол Вайзел</li>
+			<li class="info__tag">электрический теплый пол Enerpia</li>
+			<li class="info__tag">какая инфракрасная пленка лучше</li>
+			<li class="info__tag">монтаж матов под плитку</li>
+			<li class="info__tag">электрический пол 2 м2</li>
+			<li class="info__tag">электрический пол 2,5 м2</li>
+			<li class="info__tag">электрический пол 4,5 м2</li>
+		</ul>
+	</div>
+</section>
+
+		</main>
+		<footer class="footer">
+	<div class="container">
+		<h2 class="footer__title">Остались вопросы?</h2>
+		<p class="footer__text">
+			Оставьте заявку и получите консультацию технолога.
+		</p>
+		<form class="footer__form">
+			<input class="footer__form-input" type="text" placeholder="Имя" />
+			<div class="footer__form-input-btn">
+				<input type="text" placeholder="Телефон" data-phone-input />
+				<button type="submit">Задать вопрос</button>
+			</div>
+		</form>
+
+		<div class="footer__row">
+			<div class="footer__col">
+				<h4>Каталог</h4>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#">Инфракрасная пленка Heat Plus</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Кабельный теплый пол под плитку</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Терморегуляторы для теплого пола</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Сопутствующие материалы для теплого пола</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Керамические энергосберегающие обогреватели</a>
+					</li>
+					<li class="footer__item"><a href="#">Коврики с подогревом</a></li>
+					<li class="footer__item"><a href="#">Распродажа</a></li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<h4>Наши предложения</h4>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#">Распродажи и скидки</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Новинки</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Популярные товары</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Рекомендуемые товары</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Уцененные товары</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<h4>Помощь и сервисы</h4>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#">Отзывы о магазине</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Контакты</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Пункты выдачи</a>
+					</li>
+					<li class="footer__item">
+						<a href="#">Услуги и сервис</a>
+					</li>
+					<li class="footer__item"><a href="#">О магазине</a></li>
+					<li class="footer__item"><a href="#">Статьи</a></li>
+					<li class="footer__item"><a href="#">Монтаж (Инструкции)</a></li>
+					<li class="footer__item"><a href="#">Карта сайта</a></li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<h4>Контактная информация</h4>
+				<ul class="footer__list-second">
+					<li class="footer__item-second">
+						<a class="num" href="tel:0445020356"
+							><span>(044)</span> 502-03-56</a
+						>
+						<p class="text">Техподдержка (24/7)</p>
+					</li>
+					<li class="footer__item-second">
+						<a class="num" href="tel:0675357132"
+							><span>(067)</span> 535-71-32</a
+						>
+						<ul class="list-one">
+							<li class="text">Отдел продаж</li>
+							<li><img src="./img/icons/telegram.svg" alt="" /></li>
+							<li><img src="./img/icons/viber.svg" alt="" /></li>
+							<li><img src="./img/icons/whatsapp.svg" alt="" /></li>
+						</ul>
+					</li>
+					<li class="footer__item-second">
+						<p class="text-second">г. Киев, ул. Марии Капнист, 10А</p>
+						<a class="text-link" href="#">посмотреть на карте</a>
+					</li>
+					<li class="footer__item-second">
+						<p class="text">
+							email:
+							<a class="text-second" href="mailto:solray.ua@ukr.net"
+								>solray.ua@ukr.net</a
+							>
+						</p>
+						<ul class="list-two">
+							<li><img src="./img/icons/mage_facebook.svg" alt="" /></li>
+							<li><img src="./img/icons/mage_instagram.svg" alt="" /></li>
+							<li><img src="./img/icons/mage_youtube.svg" alt="" /></li>
+						</ul>
+					</li>
+					<li class="footer__item-second">
+						<p class="text-second">
+							График работы: <br />
+							Пн-Пт: с 09:00 до 18:00 <br />
+							Сб-Вс: выходной
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__descr">
+		<div class="container">
+			<ul class="footer__descr-list">
+				<li class="footer__descr-item">
+					<img src="./img/visa.svg" alt="" />
+				</li>
+				<li class="footer__descr-item">
+					<img src="./img/mastercard.svg" alt="" />
+				</li>
+				<li class="footer__descr-item">
+					<img src="./img/liqpay.svg" alt="" />
+				</li>
+				<li class="footer__descr-item">
+					<img src="./img/privat.svg" alt="" />
+				</li>
+			</ul>
+			<a class="footer__descr-offer" href="#">Публичный договор оферты</a>
+			<p class="footer__descr-text">Все права защищены.</p>
+		</div>
+	</div>
+</footer>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
