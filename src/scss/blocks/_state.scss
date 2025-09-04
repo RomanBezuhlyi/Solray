@@ -38,21 +38,4 @@
 			margin-bottom: 20px;
 		}
 	}
-
-	&__btn {
-		@include center;
-		@include box(281px, 64px, 48px);
-		border: 2px solid $accent;
-		background: $accent;
-		color: $bg;
-		@include text-style(20px, 600, normal, center);
-		@include transition;
-		&:hover {
-			background-color: transparent;
-			color: $accent;
-		}
-		@media (max-width: 991px) {
-			height: 60px;
-		}
-	}
 }
