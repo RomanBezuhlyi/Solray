@@ -2,7 +2,7 @@
 
 .actions {
 	padding: 120px 0;
-	background: #fafafa;
+	background: $lightGrey;
 	@media (max-width: 991px) {
 		padding: 60px 0;
 	}
@@ -25,9 +25,7 @@
 
 	&__card-large {
 		position: relative;
-		width: 365px;
-		height: 673px;
-		border-radius: 15px;
+		@include box(365px, 673px, 15px);
 		object-fit: cover;
 		overflow: hidden;
 		@media (max-width: 767px) {
@@ -35,8 +33,7 @@
 		}
 		img {
 			position: absolute;
-			width: 100%;
-			height: 100%;
+			@include box(100%);
 			object-fit: cover;
 		}
 		.actions__card-info {
@@ -71,9 +68,7 @@
 
 	&__card-medium {
 		position: relative;
-		width: 480px;
-		height: 322px;
-		border-radius: 15px;
+		@include box(480px, 322px, 15px);
 		object-fit: cover;
 		overflow: hidden;
 		@media (max-width: 767px) {
@@ -81,8 +76,7 @@
 		}
 		img {
 			position: absolute;
-			width: 100%;
-			height: 100%;
+			@include box(100%);
 		}
 		.actions__card-info {
 			padding: 36px 224px 0 20px;
@@ -104,9 +98,7 @@
 
 	&__card-small {
 		position: relative;
-		width: 292px;
-		height: 322px;
-		border-radius: 15px;
+		@include box(292px, 322px, 15px);
 		object-fit: cover;
 		overflow: hidden;
 		@media (max-width: 767px) {
@@ -114,8 +106,7 @@
 		}
 		img {
 			position: absolute;
-			width: 100%;
-			height: 100%;
+			@include box(100%);
 		}
 		.actions__card-info {
 			padding: 36px 52px 0 20px;
@@ -142,21 +133,7 @@
 	}
 
 	&__btn {
-		margin: auto;
 		margin-top: 50px;
-		@include center;
-		@include box(285px, 70px, 48px);
-		border: 2px solid $text;
-		@include text-style(20px, 600, normal, center);
-		@include transition;
-		&:hover {
-			background-color: $text;
-			color: $bg;
-		}
-		@media (max-width: 600px) {
-			width: 100%;
-			height: 60px;
-		}
 	}
 }
 .actions-page {

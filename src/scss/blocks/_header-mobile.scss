@@ -194,6 +194,8 @@
 		@include transition;
 
 		svg {
+			width: 20px;
+			height: 20px;
 			stroke: $bg;
 			stroke-opacity: 0.5;
 			@include transition;

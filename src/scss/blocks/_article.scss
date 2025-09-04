@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.article {
+	&__top {
+		@include flex(row, space-between, flex-start, 45px);
+		margin-bottom: 40px;
+		@media (max-width: 1024px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 991px) {
+			gap: 25px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		@include text-style(40px, 700, normal);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		@include text-style(14px, 400, 24px);
+	}
+
+	&__img {
+		@include box(auto, 367px, 14px);
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+}

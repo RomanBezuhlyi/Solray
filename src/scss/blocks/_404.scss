@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.error {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	@include flex(column, center, center);
+	@media (max-width: 991px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	&__img {
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		color: $darkGrey;
+		@include text-style(24px, 500, normal, center);
+		margin-bottom: 120px;
+		@media (max-width: 991px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__btn {
+		@include center;
+		@include box(316px, 66px, 48px);
+		background: $accent;
+		border: 2px solid $accent;
+		color: $bg;
+		@include text-style(20px, 600, normal, center);
+		@include transition;
+		&:hover {
+			background-color: $bg;
+			color: $accent;
+		}
+		@media (max-width: 600px) {
+			@include box(100%, 60px);
+		}
+	}
+}

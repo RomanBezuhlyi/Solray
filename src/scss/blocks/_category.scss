@@ -8,7 +8,7 @@
 }
 .breadcrumbs-wrap {
 	padding: 36px 0;
-	background: #fafafa;
+	background: $lightGrey;
 	@media (max-width: 991px) {
 		padding: 24px 0;
 	}
@@ -115,8 +115,7 @@
 .target {
 	position: relative;
 	.swiper {
-		width: 100%;
-		height: 100%;
+		@include box(100%);
 	}
 	.swiper-slide {
 		padding: 36px 22px 20px 20px;
@@ -126,8 +125,7 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
-		width: 100%;
-		height: 100%;
+		@include box(100%);
 		object-fit: cover;
 	}
 

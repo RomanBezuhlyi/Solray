@@ -3,6 +3,7 @@
 @use './base/base' as *;
 @use './base/utilities' as *;
 @use './base/container' as *;
+@use './base/components' as *;
 
 @use './blocks/header' as *;
 @use './blocks/header-mobile' as *;
@@ -19,4 +20,6 @@
 @use './blocks/products' as *;
 @use './blocks/category' as *;
 @use './blocks/action' as *;
+@use './blocks/article' as *;
+@use './blocks/404' as *;
 @use './blocks/footer' as *;

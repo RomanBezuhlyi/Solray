@@ -61,8 +61,7 @@
 	}
 
 	&__item {
-		width: 278px;
-		border-radius: 14px;
+		@include box(278px, auto, 14px);
 		background: $bg;
 		box-shadow: 1px 2px 9px 0 rgba(18, 18, 18, 0.06);
 		overflow: hidden;
@@ -82,8 +81,7 @@
 
 	&__item-top {
 		position: relative;
-		width: 100%;
-		height: 278px;
+		@include box(100%, 278px);
 		background: #eef0f2;
 	}
 
@@ -91,8 +89,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		@include box(100%);
 		background: rgba(18, 18, 18, 0.7);
 		opacity: 0;
 		pointer-events: none;
@@ -114,7 +111,9 @@
 		@include text-style(14px, 600, normal, center);
 		@include transition;
 		svg {
+			@include box(16px);
 			stroke: $bg;
+			fill: transparent;
 			@include transition;
 		}
 		&:hover {
@@ -171,7 +170,9 @@
 		top: 24px;
 		right: 24px;
 		z-index: 10;
+
 		svg {
+			@include box(20px, 18px);
 			stroke: $text;
 			fill: none;
 			@include transition;
@@ -197,8 +198,7 @@
 		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: 167px;
-		height: 165px;
+		@include box(167px, 165px);
 		object-fit: cover;
 	}
 
@@ -218,7 +218,7 @@
 			color: #75cc2f;
 		}
 		&.out-stock {
-			color: #ff0000;
+			color: $accent;
 		}
 	}
 
@@ -236,31 +236,9 @@
 	&__item-rate {
 		@include flex(row, center, center, 6px);
 		@include text-style(14px, 600, 30px, right);
-	}
-
-	&__btn {
-		margin: auto;
-		@include flex(row, center, center, 8px);
-		@include box(281px, 66px, 48px);
-		background: $text;
-		border: 2px solid $text;
-		color: $bg;
-		@include text-style(20px, 600, normal, center);
-		@include transition;
 		svg {
-			@include transition;
-			fill: $bg;
-		}
-		&:hover {
-			background-color: $bg;
-			color: $text;
-			svg {
-				fill: $text;
-			}
-		}
-		@media (max-width: 600px) {
-			width: 100%;
-			height: 60px;
+			@include box(18px);
+			stroke: transparent;
 		}
 	}
 }

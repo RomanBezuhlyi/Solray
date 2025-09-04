@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .reviews {
-	background: #fafafa;
+	background: $lightGrey;
 	padding: 120px 0;
 	@media (max-width: 991px) {
 		padding: 60px 0;
@@ -43,9 +43,7 @@
 	}
 
 	&__item-avatar {
-		width: 32px;
-		height: 32px;
-		border-radius: 100%;
+		@include box(32px, 32px, 100%);
 		object-fit: cover;
 	}
 
@@ -69,24 +67,5 @@
 
 	&__item-text {
 		@include text-style(16px, 300, 24px, justify);
-	}
-
-	&__btn {
-		margin: auto;
-		@include center;
-		@include box(281px, 66px, 48px);
-		background: $text;
-		color: $bg;
-		border: 2px solid $text;
-		@include text-style(20px, 600, normal, center);
-		@include transition;
-		&:hover {
-			background-color: transparent;
-			color: $text;
-		}
-		@media (max-width: 600px) {
-			width: 100%;
-			height: 60px;
-		}
 	}
 }

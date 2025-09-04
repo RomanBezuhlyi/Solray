@@ -34,8 +34,7 @@
 
 	&__item-link {
 		img {
-			width: 204px;
-			height: 204px;
+			@include box(204px);
 			object-fit: cover;
 			margin-bottom: 24px;
 		}
@@ -60,8 +59,7 @@
 			color: $text;
 		}
 		@media (max-width: 600px) {
-			width: 100%;
-			height: 60px;
+			@include box(100%, 60px);
 		}
 	}
 }
