@@ -142,6 +142,7 @@
 	@include flex(row, flex-start, center, 13px);
 	margin-bottom: 33px;
 	@media (max-width: 991px) {
+		flex-wrap: wrap;
 		margin-bottom: 20px;
 	}
 	&.second {
@@ -218,16 +219,26 @@
 }
 
 .btn-accent {
-	@include center;
+	@include flex(row, center, center, 8px);
 	@include box(281px, 64px, 48px);
 	border: 2px solid $accent;
 	background: $accent;
 	color: $bg;
 	@include text-style(20px, 600, normal, center);
 	@include transition;
+	svg {
+		fill: transparent;
+		stroke: $bg;
+		@include box(20px);
+		@include transition;
+	}
 	&:hover {
 		background-color: transparent;
 		color: $accent;
+		svg {
+			fill: transparent;
+			stroke: $accent;
+		}
 	}
 	@media (max-width: 600px) {
 		@include box(100%, 60px);

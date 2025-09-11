@@ -187,8 +187,7 @@
 
 	&__item {
 		@include flex(column, flex-end, center, 2px);
-		width: 53px;
-		height: 44px;
+		@include box(53px, 44px);
 		color: rgba(255, 255, 255, 0.5);
 		@include text-style(10px, 500, normal, center);
 		@include transition;

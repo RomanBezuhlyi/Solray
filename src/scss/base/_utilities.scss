@@ -13,3 +13,17 @@
 .visible {
 	visibility: visible;
 }
+
+.desktop {
+	display: block !important;
+	@media (max-width: 991px) {
+		display: none !important;
+	}
+}
+
+.mobile {
+	display: none !important;
+	@media (max-width: 991px) {
+		display: block !important;
+	}
+}

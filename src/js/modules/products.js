@@ -35,3 +35,22 @@ export function initProductsSwiper2() {
 		},
 	})
 }
+
+export function initProductsSwiper3() {
+	new Swiper('.swiperProducts3', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		navigation: {
+			prevEl: '.products__prev',
+			nextEl: '.products__next',
+		},
+		breakpoints: {
+			767: {
+				slidesPerView: 2,
+			},
+			991: {
+				slidesPerView: 4,
+			},
+		},
+	})
+}
