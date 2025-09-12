@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.advantages {
+	margin-top: 120px;
+	@media (max-width: 991px) {
+		margin-top: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			font-size: 24px;
+		}
+	}
+
+	&__list {
+		@include flex(row, center, flex-start, 36px);
+		@media (max-width: 991px) {
+			@include flex(column, center, center, 20px);
+		}
+	}
+
+	&__item {
+		max-width: 376px;
+		@include flex(column, flex-start, center);
+	}
+
+	&__item-img {
+		margin-bottom: 24px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__item-title {
+		color: $accent;
+		@include text-style(17px, 700, 23px, center);
+		@media (max-width: 991px) {
+			@include text-style(16px, 700, 20px, center);
+		}
+	}
+
+	&__item-text {
+		@include text-style(17px, 400, 23px, center);
+		@media (max-width: 991px) {
+			@include text-style(16px, 400, 20px, center);
+		}
+	}
+}

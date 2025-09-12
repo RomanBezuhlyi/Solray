@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+.offer {
+	max-width: 800px;
+	&__title {
+		margin-top: 30px;
+		@include text-style(40px, 700, normal);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			margin-top: 15px;
+			@include text-style(24px, 700, normal);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__block {
+		&:not(:last-child) {
+			margin-bottom: 56px;
+			@media (max-width: 991px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__block-title {
+		@include text-style(22px, 700, normal);
+		margin-bottom: 16px;
+		@media (max-width: 991px) {
+			font-size: 18px;
+		}
+	}
+
+	&__block-list {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__block-item {
+		@include flex(row, flex-start, flex-start);
+		@include text-style(16px, 400, 24px);
+		span {
+			display: flex;
+			flex-shrink: 0;
+			width: 36px;
+		}
+	}
+
+	&__block-table {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__block-table--item {
+		width: 100%;
+		@include flex(row, space-between, flex-end, 6px);
+		@media (max-width: 991px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.label {
+			@include text-style(16px, 400, 24px, left);
+			white-space: nowrap;
+			@media (max-width: 991px) {
+				white-space: wrap;
+			}
+		}
+		.line {
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #ececec;
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+		.value {
+			@include text-style(16px, 700, 24px, right);
+			white-space: nowrap;
+			@media (max-width: 991px) {
+				text-align: left;
+				white-space: wrap;
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+@use '../abstracts' as *;
+
+.project {
+	&__title {
+		margin-top: 20px;
+		@include text-style(40px, 700, normal);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			margin-top: 10px;
+			@include text-style(24px, 700, normal);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__content {
+		@include flex(row, flex-start, center, 32px);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, center, 20px);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__content-img {
+		@include box(526px, 350px, 14px);
+		flex-shrink: 0;
+		object-fit: cover;
+		@media (max-width: 991px) {
+			@include box(100%, 300px, 14px);
+		}
+	}
+
+	&__content-label {
+		@include text-style(16px, 700, 24px);
+		margin-bottom: 7px;
+	}
+
+	&__content-text {
+		@include text-style(16px, 400, 24px);
+	}
+
+	&__solution {
+		padding: 24px;
+		border-radius: 14px;
+		background: #fafafa;
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			padding: 16px;
+		}
+	}
+
+	&__solution-label {
+		@include text-style(22px, 700, normal);
+		margin-bottom: 6px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 700, normal);
+		}
+	}
+
+	&__solution-text {
+		@include text-style(22px, 300, normal);
+		@media (max-width: 991px) {
+			@include text-style(16px, 300, normal);
+		}
+	}
+
+	&__content-second {
+		@include flex(row, center, center, 56px);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			@include flex(column, center, center, 20px);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__content-info {
+		@include flex(column, center, flex-start, 36px);
+		@media (max-width: 991px) {
+			gap: 20px;
+		}
+	}
+
+	&__results {
+		margin-bottom: 120px;
+		@media (max-width: 991px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__results-title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 36px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__results-list {
+		@include flex(row, flex-start, center, 36px);
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, center, 20px);
+		}
+	}
+
+	&__results-item {
+		max-width: 376px;
+		@media (max-width: 991px) {
+			max-width: 100%;
+		}
+	}
+
+	&__results-item--title {
+		@include text-style(18px, 700, 24px);
+		margin-bottom: 6px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 700, 20px);
+		}
+	}
+
+	&__results-item--descr {
+		@include text-style(16px, 400, 24px);
+	}
+}
