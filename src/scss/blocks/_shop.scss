@@ -1,0 +1,153 @@
+@use '../abstracts' as *;
+
+.shop {
+	&__title {
+		@include text-style(40px, 700, normal);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__switcher {
+		display: inline-flex;
+		box-shadow: 0 -4px 20px -8px rgba(18, 18, 18, 0.1),
+			-4px 0 20px -8px rgba(18, 18, 18, 0.1),
+			4px 0 20px -8px rgba(18, 18, 18, 0.1);
+		border-radius: 14px 14px 0 0;
+	}
+
+	&__switch {
+		@include center;
+		background: $bg;
+		border-top: 1px solid #ececec;
+		border-right: 1px solid #ececec;
+		border-left: 1px solid #ececec;
+		border-bottom: 3px solid transparent;
+		@include transition;
+
+		a {
+			padding: 24px 56px;
+			color: rgba(18, 18, 18, 0.3);
+			@include text-style(22px, 700, normal);
+			@include transition;
+			@media (max-width: 991px) {
+				padding: 10px 16px;
+				@include text-style(16px, 700, normal);
+			}
+		}
+	}
+
+	&__switch:nth-child(1) {
+		border-radius: 14px 0 0 0;
+	}
+
+	&__switch:nth-child(2) {
+		border-left: 1px solid #ececec;
+		border-right: 1px solid #ececec;
+	}
+
+	&__switch:nth-child(3) {
+		border-radius: 0 14px 0 0;
+	}
+
+	&__switch.active {
+		border-bottom: 3px solid $accent;
+		a {
+			color: $text;
+		}
+	}
+
+	&__body {
+		padding: 24px;
+		border-radius: 0 14px 14px 14px;
+		border: 1px solid #ececec;
+		background: $bg;
+		box-shadow: 1px 2px 38px 0 rgba(18, 18, 18, 0.1);
+		@media (max-width: 991px) {
+			padding: 16px;
+		}
+	}
+}
+.delivery {
+	&__text {
+		@include text-style(16px, 400, 24px);
+	}
+
+	&__list {
+		margin: 56px 0;
+		@include flex(row, flex-start, flex-start, 36px);
+		flex-wrap: wrap;
+		@media (max-width: 991px) {
+			margin: 30px 0;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		width: 48%;
+		@include flex(row, center, center, 16px);
+		@include text-style(16px, 400, 24px);
+		@media (max-width: 991px) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+}
+.payment {
+	&__text {
+		@include text-style(16px, 400, 24px);
+	}
+
+	&__block {
+		@include flex(row, flex-start, flex-start, 56px);
+		margin: 24px 0;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			margin: 16px 0;
+			gap: 30px;
+		}
+	}
+
+	&__left {
+		width: 50%;
+		@include flex(column, flex-start, flex-start, 36px);
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 20px;
+		}
+	}
+
+	&__right {
+		width: 50%;
+		@include flex(column, flex-start, flex-start, 36px);
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 20px;
+		}
+	}
+
+	&__section {
+		p {
+			@include text-style(16px, 400, 24px);
+		}
+		ul {
+			list-style-type: disc;
+		}
+		ul > li {
+			margin-left: 20px;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+.return {
+	&__text {
+		@include text-style(16px, 400, 24px);
+	}
+	a {
+		text-decoration: underline;
+	}
+}

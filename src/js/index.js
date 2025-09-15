@@ -16,6 +16,7 @@ import {
 } from './modules/products'
 import { initReviewsSwiper } from './modules/reviews'
 import { initMobileSearch } from './modules/search'
+import { initShopSwitcher } from './modules/shop'
 import { initTargetSwiper } from './modules/target'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initProductSwiperMobile()
 	initCharacteristicsOpen()
 	initCalcComponent()
+	initShopSwitcher()
 })
