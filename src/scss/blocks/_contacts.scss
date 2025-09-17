@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+
+.contacts {
+	&__block {
+		@include flex(row, flex-start, center, 56px);
+		padding: 24px;
+		border-radius: 14px;
+		background: $lightGrey;
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, center, 30px);
+			padding: 16px;
+		}
+	}
+
+	&__info {
+		padding: 56px 0;
+		@media (max-width: 991px) {
+			padding: 30px 0;
+		}
+	}
+
+	&__info-title {
+		@include text-style(40px, 700, normal);
+		margin-bottom: 36px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__info-num {
+		@include flex(row, flex-start, center, 16px);
+		@include text-style(32px, 400, normal);
+		opacity: 0.5;
+		margin-bottom: 6px;
+		@media (max-width: 991px) {
+			gap: 8px;
+			@include text-style(24px, 400, normal);
+		}
+	}
+
+	&__info-label {
+		@include flex(row, flex-start, center, 6px);
+		@include text-style(14px, 400, normal);
+		margin-bottom: 24px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__info-email {
+		@include flex(row, flex-start, center, 24px);
+		@include text-style(16px, 700, normal);
+		margin-bottom: 24px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+		a {
+			@include flex(row, flex-start, center, 6px);
+		}
+	}
+
+	&__info-schedule {
+		@include flex(row, flex-start, flex-start, 6px);
+		@include text-style(16px, 400, normal);
+	}
+
+	&__map {
+		border-radius: 14px;
+		overflow: hidden;
+		background-color: $bg;
+		iframe {
+			@include box(742px, 445px);
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+		}
+		p {
+			padding: 24px;
+			@include flex(row, center, center, 16px);
+			@include text-style(22px, 400, normal);
+			@media (max-width: 991px) {
+				padding: 16px;
+				@include text-style(16px, 400, normal);
+				@include flex(column, center, center);
+			}
+		}
+		p > span {
+			font-weight: 700;
+		}
+	}
+
+	&__table {
+		h2 {
+			margin-top: 56px;
+			margin-bottom: 24px;
+			@include text-style(40px, 700, normal);
+			@media (max-width: 991px) {
+				margin-top: 30px;
+				margin-bottom: 16px;
+				@include text-style(24px, 700, normal);
+			}
+		}
+	}
+}
