@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.wholesale {
+	margin-top: 20px;
+	@include flex(row, center, center, 50px);
+	@media (max-width: 991px) {
+		margin-top: 10px;
+		@include flex(column, flex-start, flex-start, 20px);
+	}
+	&__info {
+		h1 {
+			@include text-style(40px, 700, normal);
+			margin-bottom: 24px;
+			@media (max-width: 991px) {
+				@include text-style(24px, 700, normal);
+				margin-bottom: 16px;
+			}
+		}
+		p {
+			@include text-style(22px, 600, normal);
+			margin-bottom: 24px;
+			@media (max-width: 991px) {
+				@include text-style(16px, 600, normal);
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__img {
+		@include box(672px, 515px, 14px);
+		object-fit: cover;
+		@media (max-width: 991px) {
+			@include box(100%, 400px);
+		}
+	}
+}

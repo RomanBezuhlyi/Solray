@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.audience {
+	margin-top: 120px;
+	@media (max-width: 991px) {
+		margin-top: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		@include flex(row, center, center, 30px);
+		@media (max-width: 991px) {
+			@include flex(column, center, center, 20px);
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-top: 24px;
+		@include box(278px, 260px, 14px);
+		background: linear-gradient(295deg, #dedee0 1.24%, #f5f5f5 65.83%);
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+		p {
+			max-width: 217px;
+			@include text-style(14px, 600, normal, center);
+			margin: auto;
+			margin-bottom: 29px;
+		}
+		img {
+			position: absolute;
+			bottom: 0;
+			@media (max-width: 991px) {
+				max-width: 80%;
+			}
+		}
+	}
+	&__item:nth-child(1) {
+		img {
+			left: 59px;
+		}
+	}
+	&__item:nth-child(2) {
+		img {
+			left: 16px;
+		}
+	}
+	&__item:nth-child(3) {
+		img {
+			left: 11px;
+		}
+	}
+	&__item:nth-child(4) {
+		img {
+			left: 11px;
+		}
+	}
+}

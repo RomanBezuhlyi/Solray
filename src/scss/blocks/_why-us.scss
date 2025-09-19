@@ -62,7 +62,7 @@
 	&__item:nth-child(3)::before,
 	&__item:nth-child(6)::before,
 	&__item:nth-child(9)::before {
-		content: none;
+		content: '';
 		@media (max-width: 991px) {
 			content: none;
 		}
@@ -78,7 +78,7 @@
 	&__item:nth-child(9)::before {
 		content: none;
 		@media (max-width: 768px) {
-			content: none;
+			content: '';
 		}
 	}
 }

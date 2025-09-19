@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.brands {
+	&__title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 59px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		@include flex(row, center, flex-start);
+		margin-bottom: 36px;
+		@media (max-width: 991px) {
+			@include flex(column, center, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		@include center;
+	}
+}
