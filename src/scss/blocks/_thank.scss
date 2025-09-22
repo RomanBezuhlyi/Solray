@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.thank {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	@media (max-width: 991px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		@include text-style(16px, 400, normal, center);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.btn-accent {
+		margin: auto;
+	}
+}

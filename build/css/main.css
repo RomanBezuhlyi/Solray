@@ -3112,7 +3112,7 @@ button {
 }
 .portfolio__card-large .loop {
   position: absolute;
-  top: 0;
+  top: 24px;
   right: 24px;
   width: 60px;
   height: 60px;
@@ -3177,7 +3177,7 @@ button {
 }
 .portfolio__card-medium .loop {
   position: absolute;
-  top: 0;
+  top: 24px;
   right: 24px;
   width: 60px;
   height: 60px;
@@ -3215,7 +3215,7 @@ button {
 }
 .portfolio__card-small .loop {
   position: absolute;
-  top: 0;
+  top: 24px;
   right: 24px;
   width: 60px;
   height: 60px;
@@ -5295,6 +5295,48 @@ button {
   .workflow__info-text {
     font-size: 14px;
   }
+}
+
+.thank {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 991px) {
+  .thank {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.thank__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 991px) {
+  .thank__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+.thank__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 991px) {
+  .thank__text {
+    margin-bottom: 20px;
+  }
+}
+.thank .btn-accent {
+  margin: auto;
 }
 
 .footer {
