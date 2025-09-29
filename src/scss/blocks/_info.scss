@@ -17,6 +17,39 @@
 		}
 	}
 
+	&__block-video {
+		position: relative;
+		@include box(598px, 510px, 20px);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			@include box(100%, 510px);
+		}
+		@media (max-width: 600px) {
+			height: 300px;
+		}
+	}
+
+	&__block-video--iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		z-index: 1;
+	}
+
+	&__block-video--overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		z-index: 2;
+	}
+
+	&__block-video--btn {
+		@include сentering;
+		z-index: 3;
+	}
+
 	&__block-img {
 		@include box(598px, 510px, 20px);
 		object-fit: cover;
@@ -30,6 +63,10 @@
 
 	&__block-content {
 		position: relative;
+		width: 50%;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
 		p {
 			@include text-style(16px, 300, 24px);
 			margin-bottom: 40px;

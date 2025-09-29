@@ -1,3 +1,4 @@
+import { initAboutUsSwiper } from './modules/about-us'
 import { initDropdowns } from './modules/dropdown'
 import { initSeeMore } from './modules/info'
 import { initLangSwitches } from './modules/lang'
@@ -18,6 +19,7 @@ import { initReviewsSwiper } from './modules/reviews'
 import { initMobileSearch } from './modules/search'
 import { initShopSwitcher } from './modules/shop'
 import { initTargetSwiper } from './modules/target'
+import { initVideoOverlay } from './modules/video'
 
 document.addEventListener('DOMContentLoaded', () => {
 	initLangSwitches()
@@ -36,4 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCharacteristicsOpen()
 	initCalcComponent()
 	initShopSwitcher()
+	initAboutUsSwiper()
+	initVideoOverlay()
 })
