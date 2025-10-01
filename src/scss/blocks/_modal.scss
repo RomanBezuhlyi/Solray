@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	@include center;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	@include transition;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+	&__content {
+		background: $bg;
+		padding: 36px 24px 50px 24px;
+		max-width: 500px;
+		border-radius: 14px;
+		position: relative;
+		@media (max-width: 991px) {
+			max-width: 90%;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 12px;
+		right: 16px;
+		font-size: 36px;
+		cursor: pointer;
+		@media (max-width: 991px) {
+			font-size: 24px;
+		}
+	}
+
+	&__title {
+		@include text-style(40px, 700, 50px, center);
+		margin-bottom: 10px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, 50px, center);
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		@include text-style(22px, 600, normal, center);
+		margin-bottom: 30px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 600, normal, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__form {
+		@include flex(column, center, center);
+	}
+
+	&__form-input {
+		@include box(100%, 70px, 50px);
+		@include text-style(16px, 400, normal);
+		padding: 0 32px;
+		border: 1.5px solid $text;
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			height: 50px;
+		}
+		&::placeholder {
+			color: #9c9a9a;
+		}
+	}
+
+	&__form-submit {
+		width: 100%;
+		@media (max-width: 991px) {
+			height: 50px;
+		}
+	}
+}
+
+body.modal-open {
+	overflow: hidden;
+}

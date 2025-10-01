@@ -1,0 +1,281 @@
+@use '../abstracts' as *;
+
+.calculator {
+	padding-bottom: 120px;
+	@media (max-width: 991px) {
+		padding-bottom: 60px;
+	}
+	&__title {
+		@include text-style(40px, 700, normal, center);
+		margin-bottom: 16px;
+		@media (max-width: 991px) {
+			@include text-style(24px, 700, normal, center);
+		}
+	}
+
+	&__text {
+		@include text-style(16px, 700, normal, center);
+		margin-bottom: 36px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__bar {
+		@include flex(row, center, flex-start, 4px);
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__bar-item {
+		span {
+			color: $bg;
+			@include text-style(18px, 700, normal, center);
+			letter-spacing: -0.36px;
+			@include center;
+			@include box(36px, 36px, 36px);
+			background: $darkGrey;
+			@media (max-width: 991px) {
+				font-size: 16px;
+				@include box(30px, 30px, 30px);
+			}
+		}
+		p {
+			color: $darkGrey;
+			@include text-style(18px, 700, normal, center);
+			letter-spacing: -0.36px;
+			@media (max-width: 991px) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__bar-item.active {
+		span {
+			background: $accent;
+		}
+		p {
+			color: $text;
+		}
+	}
+
+	&__bar-line {
+		position: relative;
+		top: 18px;
+		@include box(100%, 1px);
+		background: $darkGrey;
+		@media (max-width: 1024px) {
+			width: 20px;
+		}
+		@media (max-width: 991px) {
+			top: 15px;
+		}
+	}
+
+	&__bar-line.active {
+		background: $accent;
+	}
+
+	&__sub-title {
+		@include text-style(16px, 700, 26px);
+		margin-bottom: 24px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__row {
+		@include flex(row, flex-start, flex-start, 30px);
+		@media (max-width: 1024px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 991px) {
+			gap: 20px;
+		}
+	}
+
+	&__list {
+		@include flex(row, flex-start, flex-start, 30px);
+		flex-wrap: wrap;
+		margin-bottom: 56px;
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list-item input[type='radio'] {
+		appearance: none;
+		-webkit-appearance: none;
+		inline-size: 24px;
+		block-size: 24px;
+		border: 2px solid #d0d0d0;
+		border-radius: 50%;
+		display: inline-grid;
+		place-items: center;
+		margin-right: 8px;
+		cursor: pointer;
+	}
+
+	&__list-item input[type='radio']::before {
+		content: '';
+		inline-size: 16px;
+		block-size: 16px;
+		border-radius: 50%;
+		background: $accent;
+		transform: scale(0);
+		transition: transform 0.2s ease;
+	}
+
+	&__list-item input[type='radio']:checked {
+		border: 2px solid $accent;
+	}
+
+	&__list-item input[type='radio']:checked::before {
+		transform: scale(1);
+	}
+
+	&__list-item input[type='radio']:checked ~ * {
+		border-color: $accent;
+	}
+
+	&__list-item:has(input[type='radio']:checked) {
+		opacity: 1;
+		box-shadow: 1px 2px 24px 0 rgba(18, 18, 18, 0.24);
+	}
+
+	&__list-item:hover {
+		opacity: 1;
+		box-shadow: 1px 2px 24px 0 rgba(18, 18, 18, 0.24);
+	}
+
+	&__list-item {
+		position: relative;
+		@include box(276px, 322px, 14px);
+		overflow: hidden;
+		box-shadow: 1px 2px 9px 0 rgba(18, 18, 18, 0.06);
+		opacity: 0.6;
+		@include transition;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+		img {
+			@include box(100%, 90%);
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		@include box(100%, 122px, 14px);
+		@include flex(column, flex-start, flex-start);
+		padding: 24px;
+		background: $bg;
+		span {
+			margin-top: 24px;
+			@include text-style(14px, 500, 24px);
+		}
+	}
+
+	&__info-top {
+		@include flex(row, flex-start, flex-start, 6px);
+		width: 100%;
+		p {
+			width: 80%;
+			@include text-style(16px, 500, 26px);
+		}
+	}
+
+	&__list-item.second {
+		height: 255px;
+		.calculator__info {
+			height: 100%;
+		}
+	}
+
+	&__list-item.third {
+		height: 122px;
+		.calculator__info {
+			height: 100%;
+		}
+	}
+	&__list-item.fourth {
+		height: 153px;
+	}
+	&__list-item.fifth {
+		height: 552px;
+		.calculator__info {
+			height: 74px;
+			border-radius: 14px;
+			background: #fafafa;
+		}
+	}
+
+	&__info-form {
+		margin-top: 24px;
+		&.second {
+			margin-top: 0;
+		}
+		p {
+			@include text-style(14px, 500, 24px);
+			margin-bottom: 8px;
+		}
+		.inputs {
+			@include flex(row, flex-start, center, 16px);
+		}
+		.input {
+			@include flex(column, flex-start, flex-start, 6px);
+		}
+		label {
+			display: block;
+			color: #9c9a9a;
+			@include text-style(16px, 400, normal);
+		}
+		input {
+			@include center;
+			@include box(106px, 48px, 50px);
+			padding: 0 24px;
+			border: 1.5px solid #9c9a9a;
+		}
+	}
+
+	&__block-info {
+		@include flex(column, flex-start, flex-start, 12px);
+		padding: 24px;
+		border-radius: 14px;
+		background: $lightGrey;
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+		p {
+			width: 234px;
+			@include text-style(16px, 500, 26px);
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__btn-wrap {
+		@include flex(row, flex-start, center, 36px);
+		@media (max-width: 991px) {
+			gap: 16px;
+		}
+		.btn-outline {
+			margin: 0;
+			stroke: $text;
+			gap: 8px;
+			@include box(145px, 48px);
+			@include text-style(14px, 600, normal);
+		}
+		.btn-accent {
+			@include box(158px, 48px);
+			@include text-style(14px, 600, normal);
+		}
+	}
+}

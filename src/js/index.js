@@ -4,6 +4,7 @@ import { initSeeMore } from './modules/info'
 import { initLangSwitches } from './modules/lang'
 import { initPhoneMask } from './modules/mask'
 import { initMobileMenu } from './modules/menu'
+import { initAllModals } from './modules/modal'
 import {
 	initCalcComponent,
 	initCharacteristicsOpen,
@@ -40,4 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initShopSwitcher()
 	initAboutUsSwiper()
 	initVideoOverlay()
+	initAllModals()
 })
