@@ -6,7 +6,7 @@
 		padding: 60px 0;
 	}
 	&__block {
-		padding: 280px 46px 120px 46px;
+		padding: 158px 46px 120px 46px;
 		@include box(100%, 572px, 14px);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -18,15 +18,16 @@
 	}
 
 	&__title {
-		@include text-style(40px, 700, normal, center);
-		margin-bottom: 56px;
+		@include text-style(40px, 700, normal);
+		margin-bottom: 24px;
 		@media (max-width: 991px) {
 			@include text-style(24px, 700, 30px, center);
-			margin-bottom: 20px;
+			margin-bottom: 12px;
 		}
 	}
 
 	&__text {
+		max-width: 533px;
 		@include text-style(22px, 600, normal);
 		margin-bottom: 60px;
 		@media (max-width: 991px) {
@@ -42,6 +43,16 @@
 		}
 		.btn-outline {
 			margin: 0;
+			@include box(265px, 70px);
+			@media (max-width: 991px) {
+				@include box(100%, 50px);
+			}
+		}
+		.btn-accent {
+			@include box(244px, 70px);
+			@media (max-width: 991px) {
+				@include box(100%, 50px);
+			}
 		}
 	}
 }

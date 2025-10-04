@@ -10,10 +10,10 @@
 
 	&__title {
 		color: #fffefe;
-		@include text-style(50px, 700, 50px, center);
+		@include text-style(40px, 700, 50px, center);
 		margin-bottom: 5px;
 		@media (max-width: 991px) {
-			@include text-style(36px, 700, 36px, center);
+			@include text-style(24px, 700, 28px, center);
 		}
 	}
 
